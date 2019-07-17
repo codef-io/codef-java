@@ -28,8 +28,9 @@ String access_token = RequestToken.getToken("CODEF로부터 발급받은 클라�
     if (raccess_token != null){
         System.out.println(raccess_token);
     }    
-    else:
+    else{
         System.out.println('토큰발급 오류');
+    }	
 ```
 ```json
 {
