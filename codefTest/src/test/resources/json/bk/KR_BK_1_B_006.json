@@ -1,0 +1,39 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "5069429e367745baba92f5c12c4343de"
+	},
+	"data": {
+		"resAccountEndDate": "20230104",
+		"resType": "",
+		"resAccount": "94300000096010",
+		"resAccountInvestedCost": "50000",
+		"commEndDate": "20190619",
+		"resAccountName": "OO가치배당20(채권혼합)Ce",
+		"resBalanceNum": "50476",
+		"resAccountStartDate": "20180104",
+		"resAccountCurrency": "KRW",
+		"resAccountBalance": "50922",
+		"commStartDate": "20190401",
+		"resTrHistoryList": [
+			{
+				"resAccountTrTime": "092828",
+				"resBalanceNum": "50476",
+				"resAccountDesc4": "",
+				"resTranNum": "501",
+				"resAccountDesc3": "재투자",
+				"resAccountDesc2": "재투자",
+				"resAccountDesc1": "",
+				"resBasePrice": "1012.16",
+				"resAccountTrDate": "20190401",
+				"resAfterTranBalance": "50482",
+				"resValuationAmt": "50482",
+				"resTranAmount": "50000"
+			}
+		],
+		"resAccountHolder": "(주)OO",
+		"resEarningsRate": "1.84"
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "5069429e367745baba92f5c12c4343de"
+	},
+	"data": {
+		"resValidPeriod": "12",
+		"resFinalRoundNo": "1",
+		"resAccountEndDate": "20191029",
+		"resType": "비우대",
+		"resPaymentMethods": "자유적립식",
+		"resAccount": "94300000015004",
+		"resAccountStatus": "활동",
+		"resMonthlyPayment": "",
+		"commEndDate": "20190619",
+		"resAccountName": "상호부금(OOO성공맞춤적금)",
+		"resAccountStartDate": "20181029",
+		"resAccountNickName": "",
+		"resAccountBalance": "10000",
+		"commStartDate": "20190401",
+		"resContractAmount": "0",
+		"resTrHistoryList": [],
+		"resAccountHolder": "(주)OO",
+		"resManagementBranch": "(0044)북아현동",
+		"resRate": "1.7000",
+		"resLastTranDate": "20190325"
+	}
+}

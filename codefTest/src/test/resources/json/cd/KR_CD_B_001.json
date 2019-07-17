@@ -1,0 +1,50 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "bccdd4d6539540b9afe8360723bf8e8e"
+	},
+	"data": [
+		{
+			"resCardType": "",
+			"resValidPeriod": "20230331",
+			"resCardName": "OOXX 기업카드(고유)",
+			"resTrafficYN": "",
+			"resIssueDate": "20180411",
+			"resUserNm": "공용(GONG YONG)",
+			"resSleepYN": "",
+			"resCardNo": "426586******0000"
+		},
+		{
+			"resCardType": "",
+			"resValidPeriod": "20230331",
+			"resCardName": "OOXX 기업카드(고유)",
+			"resTrafficYN": "",
+			"resIssueDate": "20180824",
+			"resUserNm": "공용(GONG YONG)",
+			"resSleepYN": "",
+			"resCardNo": "426586******0000"
+		},
+		{
+			"resCardType": "",
+			"resValidPeriod": "20240229",
+			"resCardName": "OOXX 기업체크카드",
+			"resTrafficYN": "",
+			"resIssueDate": "20190327",
+			"resUserNm": "공용(GONG YONG)",
+			"resSleepYN": "",
+			"resCardNo": "463235******0000"
+		},
+		{
+			"resCardType": "",
+			"resValidPeriod": "20240331",
+			"resCardName": "OOXX 기업카드(고유)",
+			"resTrafficYN": "",
+			"resIssueDate": "20190426",
+			"resUserNm": "***(*** **** **)",
+			"resSleepYN": "",
+			"resCardNo": "426586******0000"
+		}
+	]
+}

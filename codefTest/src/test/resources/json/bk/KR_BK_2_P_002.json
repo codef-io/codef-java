@@ -1,0 +1,30 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "5ce071b6365c45da9c3a4e832e6dcdf9"
+	},
+	"data": {
+		"resFund": [],
+		"resBankName": "",
+		"resForeignCurrency": [],
+		"resLoan": [],
+		"resInsurance": [],
+		"resDepositTrust": [
+			{
+				"resAccountName": "m-보통예금",
+				"resAccountCurrency": "KRW",
+				"resAccountStartDate": "20180604",
+				"resAccountBalance": "9",
+				"resAccountNickName": "",
+				"resAccountEndDate": "",
+				"resAccountLifetime": "",
+				"resAccount": "06368130000000",
+				"resAccountDeposit": "10",
+				"resLastTranDate": "",
+				"resAccountDisplay": "063-68-13-0000000"
+			}
+		]
+	}
+}

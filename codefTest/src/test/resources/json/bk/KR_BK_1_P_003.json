@@ -1,0 +1,65 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "5069429e367745baba92f5c12c4343de"
+	},
+	"data": {
+		"resValidPeriod": "84",
+		"resFinalRoundNo": "44",
+		"resAccountEndDate": "20221228",
+		"resType": "",
+		"resPaymentMethods": "자유적립식",
+		"resAccount": "54780300000000",
+		"resAccountStatus": "정상",
+		"resMonthlyPayment": "",
+		"commEndDate": "20190619",
+		"resAccountDisplay": "547803-00-000000",
+		"resAccountName": "OO국민재형저축",
+		"resAccountStartDate": "20151228",
+		"resAccountNickName": "",
+		"resAccountBalance": "13110000",
+		"commStartDate": "20190301",
+		"resContractAmount": "",
+		"resTrHistoryList": [
+			{
+				"resAccountDesc4": "구로디",
+				"resAccountDesc3": "기일입금",
+				"resAccountDesc2": "",
+				"resAccountDesc1": "06170204162284",
+				"resRoundNo": "43",
+				"resMonth": "201905",
+				"resAccountTrDate": "20190531",
+				"resAfterTranBalance": "12810000",
+				"resAccountIn": "300000"
+			},
+			{
+				"resAccountDesc4": "구로디",
+				"resAccountDesc3": "기일입금",
+				"resAccountDesc2": "",
+				"resAccountDesc1": "06170204162284",
+				"resRoundNo": "42",
+				"resMonth": "201905",
+				"resAccountTrDate": "20190523",
+				"resAfterTranBalance": "12510000",
+				"resAccountIn": "300000"
+			},
+			{
+				"resAccountDesc4": "구로디",
+				"resAccountDesc3": "기일입금",
+				"resAccountDesc2": "",
+				"resAccountDesc1": "06170204162284",
+				"resRoundNo": "41",
+				"resMonth": "201903",
+				"resAccountTrDate": "20190401",
+				"resAfterTranBalance": "12210000",
+				"resAccountIn": "300000"
+			}
+		],
+		"resAccountHolder": "XXX",
+		"resManagementBranch": "구로디지털",
+		"resRate": "2.700",
+		"resLastTranDate": "20190701"
+	}
+}

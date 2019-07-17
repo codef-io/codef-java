@@ -1,0 +1,72 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "aedb0cade44f44e48a5f3181c2fe9a96"
+	},
+	"data": {
+		"resAccountEndDate": "",
+		"resLoanLimitAmt": "",
+		"resWithdrawalAmt": "19615",
+		"resAccount": "05300000004040",
+		"resAccountStatus": "활동",
+		"resLoanEndDate": "",
+		"commEndDate": "20190630",
+		"resInterestRate": "",
+		"resAccountName": "OO기업자유예금",
+		"resAccountStartDate": "20130605",
+		"resAccountCurrency": "KRW",
+		"resAccountBalance": "19615",
+		"commStartDate": "20190401",
+		"resTrHistoryList": [
+			{
+				"resAccountTrTime": "095900",
+				"resAccountDesc4": "",
+				"resAccountDesc3": "ｒｎｄ＿오전",
+				"resAccountDesc2": "인터넷",
+				"resAccountDesc1": "（주）OO",
+				"resAccountTrDate": "20190628",
+				"resAccountOut": "1",
+				"resAfterTranBalance": "13634",
+				"resAccountIn": "0"
+			},
+			{
+				"resAccountTrTime": "174603",
+				"resAccountDesc4": "",
+				"resAccountDesc3": "rnd_입금표시1",
+				"resAccountDesc2": "타행이체",
+				"resAccountDesc1": "OO（주）",
+				"resAccountTrDate": "20190627",
+				"resAccountOut": "0",
+				"resAfterTranBalance": "13635",
+				"resAccountIn": "1"
+			},
+			{
+				"resAccountTrTime": "164618",
+				"resAccountDesc4": "",
+				"resAccountDesc3": "rnd_입금표시1",
+				"resAccountDesc2": "타행이체",
+				"resAccountDesc1": "OO（주）",
+				"resAccountTrDate": "20190627",
+				"resAccountOut": "0",
+				"resAfterTranBalance": "13634",
+				"resAccountIn": "1"
+			},
+			{
+				"resAccountTrTime": "092130",
+				"resAccountDesc4": "",
+				"resAccountDesc3": "ｒｎｄ＿오전",
+				"resAccountDesc2": "인터넷",
+				"resAccountDesc1": "（주）OO",
+				"resAccountTrDate": "20190627",
+				"resAccountOut": "1",
+				"resAfterTranBalance": "13633",
+				"resAccountIn": "0"
+			}
+		],
+		"resAccountHolder": "(주)OO",
+		"resManagementBranch": "(0044)북아현동",
+		"resLastTranDate": "20190711"
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "5069429e367745baba92f5c12c4343de"
+	},
+	"data": {
+		"resAccountEndDate": "20210628",
+		"resAccount": "75260904000000",
+		"resPrincipal": "120000000",
+		"commEndDate": "20190708",
+		"resAccountDisplay": "752609-04-000000",
+		"resState": "",
+		"resAccountStartDate": "20190628",
+		"commStartDate": "20190601",
+		"resTrHistoryList": [
+			{
+				"resTransTypeNm": "일반신규",
+				"resInterest": "0",
+				"commStartDate": "",
+				"resType": "",
+				"resAccountTrDate": "20190628",
+				"resPrincipal": "120000000",
+				"commEndDate": "",
+				"resLoanBalance": "",
+				"resInterestRate": "",
+				"resTranAmount": ""
+			}
+		],
+		"resLoanKind": "서울특별시 신혼부부 임차",
+		"resAccountHolder": "XXX",
+		"resRate": "1.44",
+		"resDatePayment": "20190728",
+		"resLoanBalance": "120000000"
+	}
+}

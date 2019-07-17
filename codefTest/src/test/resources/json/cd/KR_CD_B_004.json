@@ -1,0 +1,15 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "32382edb06b54fbf84cee5b9755e762e"
+	},
+	"data": {
+		"resLimitAmount": "10000",
+		"resUsedAmount": "",
+		"resRemainLimit": "10000",
+		"resCardNo": "426586******0000",
+		"resCardCompany": "(주)**"
+	}
+}

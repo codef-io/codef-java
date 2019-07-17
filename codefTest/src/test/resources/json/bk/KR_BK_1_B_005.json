@@ -1,0 +1,36 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "5069429e367745baba92f5c12c4343de"
+	},
+	"data": {
+		"resAccountEndDate": "99991231",
+		"resAccount": "0530000005600017",
+		"resAccountStatus": "활동",
+		"resWithdrawalAmt": "",
+		"commEndDate": "20190630",
+		"resAccountName": "거주자외화보통예금(OOO외화통장)",
+		"resAccountStartDate": "20130605",
+		"resAccountCurrency": "USD",
+		"resAccountBalance": "523.570",
+		"commStartDate": "20190401",
+		"resTrHistoryList": [
+			{
+				"resAccountTrTime": "082412",
+				"resAccountDesc4": "",
+				"resAccountDesc3": "2019년결산",
+				"resAccountDesc2": "",
+				"resAccountDesc1": "",
+				"resAccountTrDate": "20190623",
+				"resAccountOut": "0.000",
+				"resAfterTranBalance": "523.570",
+				"resAccountIn": "0.090"
+			}
+		],
+		"resAccountHolder": "(주)00",
+		"resManagementBranch": "",
+		"resLastTranDate": "20190325"
+	}
+}

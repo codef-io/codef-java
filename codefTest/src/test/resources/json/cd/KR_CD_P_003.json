@@ -1,0 +1,69 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "5069429e367745baba92f5c12c4343de"
+	},
+	"data": {
+		"resFullAmt": "298253",
+		"resPaymentAccount": "OO은행10029405*****",
+		"resRevolving": "0",
+		"resTotalAmount": "298253",
+		"resCashService": "0",
+		"resPreWithdrawal": "0",
+		"resOverseasUse": "0",
+		"resCardLoan": "0",
+		"resPaymentDueDate": "20190514",
+		"resLateFee": "0",
+		"resBillType": "",
+		"resAnnualFee": "0",
+		"resMinDepositAmt": "0",
+		"resAmountOutstanding": "0",
+		"resInstallmentAmt": "0",
+		"resChargeHistoryList": [
+			{
+				"resUsedDate": "20190303",
+				"resUsedAmount": "300",
+				"resMemberStoreName": "SMS이용료-03월분",
+				"resEarnPoint": "0",
+				"resUsedCard": "0000",
+				"resRoundNo": "0",
+				"resInstallmentMonth": "0",
+				"resFee": "0",
+				"resPaymentType": "1",
+				"resPaymentAmt": "",
+				"resPaymentPrincipal": "300",
+				"resAfterPaymentBalance": "0"
+			},
+			{
+				"resUsedDate": "20190405",
+				"resUsedAmount": "63000",
+				"resMemberStoreName": "***양꼬치",
+				"resEarnPoint": "605",
+				"resUsedCard": "0000",
+				"resRoundNo": "0",
+				"resInstallmentMonth": "0",
+				"resFee": "0",
+				"resPaymentType": "1",
+				"resPaymentAmt": "",
+				"resPaymentPrincipal": "63000",
+				"resAfterPaymentBalance": "0"
+			},
+			{
+				"resUsedDate": "20190405",
+				"resUsedAmount": "3000",
+				"resMemberStoreName": "커피OO역점",
+				"resEarnPoint": "0",
+				"resUsedCard": "0000",
+				"resRoundNo": "0",
+				"resInstallmentMonth": "0",
+				"resFee": "0",
+				"resPaymentType": "1",
+				"resPaymentAmt": "",
+				"resPaymentPrincipal": "3000",
+				"resAfterPaymentBalance": "0"
+			}
+		]
+	}
+}

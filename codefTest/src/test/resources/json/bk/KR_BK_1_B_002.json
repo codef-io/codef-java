@@ -1,0 +1,143 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "5069429e367745baba92f5c12c4343de"
+	},
+	"data": {
+		"resFund": [
+			{
+				"resAccountName": "OO가치배당20(채권혼합)Ce",
+				"resAccountStartDate": "20180104",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "50922",
+				"resAccountNickName": "펀드/MMF",
+				"resAccountEndDate": "20230104",
+				"resEarningsRate": "1.84",
+				"resAccount": "94300000096010",
+				"resAccountDeposit": "30",
+				"resAccountInvestedCost": "50000.000",
+				"resAccountDisplay": "943-000000-96-010"
+			}
+		],
+		"resForeignCurrency": [
+			{
+				"resAccountName": "거주자외화보통예금(OOO외화통장)",
+				"resAccountStartDate": "",
+				"resAccountCurrency": "USD",
+				"resAccountBalance": "523.57",
+				"resAccountNickName": "애플계좌",
+				"resAccountEndDate": "",
+				"resAccount": "0530000005600017",
+				"resAccountDeposit": "20",
+				"resLastTranDate": "20190325",
+				"resAccountDisplay": "053-000000-56-00017"
+			}
+		],
+		"resLoan": [
+			{
+				"resAccountName": "OO중소기업자금",
+				"resAccountStartDate": "",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "0",
+				"resAccountNickName": "마이너스",
+				"resAccountEndDate": "20200417",
+				"resAccountLoanExecNo": "",
+				"resAccount": "05300000001036",
+				"resAccountDeposit": "40",
+				"resAccountDisplay": "053-000000-01-036"
+			},
+			{
+				"resAccountName": "OO중소기업자금",
+				"resAccountStartDate": "",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "100000000",
+				"resAccountNickName": "",
+				"resAccountEndDate": "20200403",
+				"resAccountLoanExecNo": "",
+				"resAccount": "0530000003200031",
+				"resAccountDeposit": "40",
+				"resAccountDisplay": "053-000000-32-00031"
+			},
+			{
+				"resAccountName": "OO중소기업자금",
+				"resAccountStartDate": "",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "100000000",
+				"resAccountNickName": "",
+				"resAccountEndDate": "20200522",
+				"resAccountLoanExecNo": "",
+				"resAccount": "9430000003200033",
+				"resAccountDeposit": "40",
+				"resAccountDisplay": "943-000000-32-00033"
+			},
+			{
+				"resAccountName": "OO팩토링채권",
+				"resAccountStartDate": "",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "0",
+				"resAccountNickName": "",
+				"resAccountEndDate": "99991231",
+				"resAccountLoanExecNo": "",
+				"resAccount": "943000000932032",
+				"resAccountDeposit": "40",
+				"resAccountDisplay": "943-000000-99-32032"
+			}
+		],
+		"resDepositTrust": [
+			{
+				"resAccountName": "OO기업자유예금(기업섬김통장)",
+				"resAccountStartDate": "",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "100000",
+				"resAccountNickName": "자동이체",
+				"resAccountEndDate": "",
+				"resAccount": "05300000004018",
+				"resOverdraftAcctYN": "0",
+				"resAccountDeposit": "11",
+				"resLastTranDate": "20190704",
+				"resAccountDisplay": "053-000000-04-018"
+			},
+			{
+				"resAccountName": "OO기업자유예금",
+				"resAccountStartDate": "",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "22628",
+				"resAccountNickName": "연구소",
+				"resAccountEndDate": "",
+				"resAccount": "05300000004040",
+				"resOverdraftAcctYN": "0",
+				"resAccountDeposit": "11",
+				"resLastTranDate": "20190708",
+				"resAccountDisplay": "053-000000-04-040"
+			},
+			{
+				"resAccountName": "OO정기예금",
+				"resAccountStartDate": "",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "10000",
+				"resAccountNickName": "OO정기예금_2018",
+				"resAccountEndDate": "20190705",
+				"resAccount": "94300000013003",
+				"resOverdraftAcctYN": "0",
+				"resAccountDeposit": "10",
+				"resLastTranDate": "20190325",
+				"resAccountDisplay": "943-000000-13-003"
+			},
+			{
+				"resAccountName": "상호부금(OO성공맞춤적금)",
+				"resAccountStartDate": "",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "10000",
+				"resAccountNickName": "상호부금",
+				"resAccountEndDate": "20191029",
+				"resAccount": "94300000015004",
+				"resOverdraftAcctYN": "0",
+				"resAccountDeposit": "12",
+				"resLastTranDate": "20190325",
+				"resAccountDisplay": "943-000000-15-004"
+			}
+		]
+	}
+}

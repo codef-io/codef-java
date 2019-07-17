@@ -1,0 +1,54 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "5069429e367745baba92f5c12c4343de"
+	},
+	"data": {
+		"resAccountEndDate": "20200417",
+		"resAccount": "05300000001036",
+		"resPrincipal": "100000000",
+		"commEndDate": "20190630",
+		"resState": "",
+		"resAccountStartDate": "20190419",
+		"commStartDate": "20190401",
+		"resTrHistoryList": [
+			{
+				"resInterest": "0.000",
+				"resReturnInterest": "",
+				"resType": "",
+				"resPrincipal": "0.000",
+				"resOverdueInterest": "",
+				"resFee": "",
+				"commEndDate": "",
+				"resInterestRate": "0.00000",
+				"resTransTypeNm": "이자원가",
+				"commStartDate": "",
+				"resAccountTrDate": "20190607",
+				"resLoanBalance": "0.000",
+				"resTranAmount": "0.000"
+			},
+			{
+				"resInterest": "0.000",
+				"resReturnInterest": "",
+				"resType": "",
+				"resPrincipal": "0.000",
+				"resOverdueInterest": "",
+				"resFee": "",
+				"commEndDate": "",
+				"resInterestRate": "0.00000",
+				"resTransTypeNm": "이자원가",
+				"commStartDate": "",
+				"resAccountTrDate": "20190507",
+				"resLoanBalance": "0.000",
+				"resTranAmount": "0.000"
+			}
+		],
+		"resLoanKind": "OOO중소기업자금대출",
+		"resAccountHolder": "",
+		"resRate": "3. 14159",
+		"resDatePayment": "20190806",
+		"resLoanBalance": "0"
+	}
+}

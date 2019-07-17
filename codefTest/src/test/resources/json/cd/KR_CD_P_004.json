@@ -1,0 +1,27 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "5069429e367745baba92f5c12c4343de"
+	},
+	"data": {
+		"resLimitOfTotalList": [
+			{
+				"resLimitAmount": "9800000",
+				"resUsedAmount": "",
+				"resRemainLimit": "9462880"
+			}
+		],
+		"resLimitOfFullTotalList": [],
+		"resLimitOfShortLoanList": [
+			{
+				"resLimitAmount": "3900000",
+				"resUsedAmount": "",
+				"resRemainLimit": "3900000"
+			}
+		],
+		"resLimitOfInstallmentList": [],
+		"resCardCompany": ""
+	}
+}

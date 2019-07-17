@@ -1,0 +1,28 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "d0e9d94168c24d9487700f1e9aafe8c3"
+	},
+	"data": {
+		"resAccountEndDate": "",
+		"resLoanLimitAmt": "",
+		"resWithdrawalAmt": "9",
+		"resAccount": "06368130000000",
+		"resAccountStatus": "정상",
+		"resLoanEndDate": "",
+		"resAccountDisplay": "063-68-13-0000000",
+		"resInterestRate": "",
+		"resAccountName": "보통예금",
+		"resBankName": "",
+		"resAccountStartDate": "20180604",
+		"resAccountBalance": "9",
+		"resAccountNickName": "",
+		"resTrHistoryList": [],
+		"resAccountHolder": "XXX",
+		"resManagementBranch": "TM팀",
+		"resLastTranDate": "20181011",
+		"resRate": "0.1"
+	}
+}

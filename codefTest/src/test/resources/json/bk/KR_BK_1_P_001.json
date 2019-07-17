@@ -1,0 +1,68 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "5069429e367745baba92f5c12c4343de"
+	},
+	"data": {
+		"resFund": [],
+		"resForeignCurrency": [],
+		"resLoan": [
+			{
+				"resAccountName": "서울특별시 신혼부부 임차보증금대출",
+				"resAccountStartDate": "20190628",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "120000000",
+				"resAccountNickName": "",
+				"resAccountEndDate": "20210628",
+				"resAccountLoanExecNo": "",
+				"resAccount": "75260904000000",
+				"resAccountDeposit": "40",
+				"resAccountDisplay": "752609-04-000000"
+			}
+		],
+		"resInsurance": [],
+		"resDepositTrust": [
+			{
+				"resAccountName": "저축예금",
+				"resAccountStartDate": "20120907",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "874890",
+				"resAccountNickName": "",
+				"resAccountEndDate": "",
+				"resAccountLifetime": "",
+				"resAccount": "06170204000000",
+				"resAccountDeposit": "11",
+				"resLastTranDate": "",
+				"resAccountDisplay": "061702-04-000000"
+			},
+			{
+				"resAccountName": "직장인우대통장-저축예금",
+				"resAccountStartDate": "20060413",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "0",
+				"resAccountNickName": "급여통장",
+				"resAccountEndDate": "",
+				"resAccountLifetime": "",
+				"resAccount": "23850204000000",
+				"resAccountDeposit": "11",
+				"resLastTranDate": "",
+				"resAccountDisplay": "238502-04-000000"
+			},
+			{
+				"resAccountName": "OO국민재형저축",
+				"resAccountStartDate": "20151228",
+				"resAccountCurrency": "KRW",
+				"resAccountBalance": "13110000",
+				"resAccountNickName": "",
+				"resAccountEndDate": "",
+				"resAccountLifetime": "",
+				"resAccount": "54780300000000",
+				"resAccountDeposit": "12",
+				"resLastTranDate": "",
+				"resAccountDisplay": "547803-00-000000"
+			}
+		]
+	}
+}

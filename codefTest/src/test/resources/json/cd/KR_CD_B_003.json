@@ -1,0 +1,46 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "fced7fca4a6a4663ac8e125c8097a6fe"
+	},
+	"data": {
+		"resDomesticUse": "902055",
+		"resFullAmt": "",
+		"resPaymentAccount": "OO은행 38360104****00",
+		"resWithdrawalDueDate": "20190125",
+		"resTotalAmount": "902055",
+		"resOverseasUse": "0",
+		"resPreWithdrawal": "",
+		"resCashService": "",
+		"resPaymentDueDate": "20190125",
+		"resCardNo": "",
+		"resLateFee": "0",
+		"resBillType": "",
+		"resAnnualFee": "0",
+		"resDepartmentName": "(주)**",
+		"resAmountOutstanding": "0",
+		"resDepartmentCode": "00000",
+		"resInstallmentAmt": "",
+		"resChargeHistoryList": [
+			{
+				"resMemberStoreCorpNo": "",
+				"resUsedAmount": "374790",
+				"resMemberStoreAddr": "서울중구세종대로00,",
+				"resRoundNo": "",
+				"resInstallmentMonth": "",
+				"resLocalAmt": "0",
+				"resFee": "",
+				"resPaymentPrincipal": "",
+				"resUsedDate": "1213",
+				"resAccountCurrency": "",
+				"resMemberStoreName": "**(주)-**",
+				"resEarnPoint": "374",
+				"resUsedCard": "비자0000",
+				"resPaymentAmt": "374790",
+				"resAfterPaymentBalance": ""
+			}
+		]
+	}
+}

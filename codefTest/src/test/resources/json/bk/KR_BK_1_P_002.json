@@ -1,0 +1,100 @@
+{
+	"result": {
+		"code": "CF-00000",
+		"extraMessage": "",
+		"message": "성공",
+		"transactionId": "5069429e367745baba92f5c12c4343de"
+	},
+	"data": {
+		"resLoanLimitAmt": "",
+		"resWithdrawalAmt": "874890",
+		"resAccount": "06170204000000",
+		"resAccountStatus": "정상",
+		"resLoanEndDate": "",
+		"commEndDate": "20190619",
+		"resAccountDisplay": "061702-04-000000",
+		"resInterestRate": "",
+		"resAccountName": "저축통장",
+		"resAccountStartDate": "20120907",
+		"resAccountBalance": "874890",
+		"resAccountNickName": "",
+		"commStartDate": "20190401",
+		"resTrHistoryList": [
+			{
+				"resAccountTrTime": "200631",
+				"resAccountDesc4": "구로디",
+				"resAccountDesc3": "54780300024283  ,43회차",
+				"resAccountDesc2": "기일출금",
+				"resAccountDesc1": "",
+				"resAccountTrDate": "20190531",
+				"resAccountOut": "300000",
+				"resAfterTranBalance": "309970",
+				"resAccountIn": "0",
+				"tranDesc": ""
+			},
+			{
+				"resAccountTrTime": "162920",
+				"resAccountDesc4": "AA증권",
+				"resAccountDesc3": "",
+				"resAccountDesc2": "전자금융",
+				"resAccountDesc1": "",
+				"resAccountTrDate": "20190529",
+				"resAccountOut": "0",
+				"resAfterTranBalance": "609970",
+				"resAccountIn": "600000",
+				"tranDesc": ""
+			},
+			{
+				"resAccountTrTime": "200616",
+				"resAccountDesc4": "구로디",
+				"resAccountDesc3": "54780300024283  ,42회차",
+				"resAccountDesc2": "기일출금",
+				"resAccountDesc1": "",
+				"resAccountTrDate": "20190523",
+				"resAccountOut": "300000",
+				"resAfterTranBalance": "9970",
+				"resAccountIn": "0",
+				"tranDesc": ""
+			},
+			{
+				"resAccountTrTime": "141319",
+				"resAccountDesc4": "OO은행",
+				"resAccountDesc3": "XXX",
+				"resAccountDesc2": "전자금융",
+				"resAccountDesc1": "",
+				"resAccountTrDate": "20190523",
+				"resAccountOut": "0",
+				"resAfterTranBalance": "309970",
+				"resAccountIn": "300000",
+				"tranDesc": ""
+			},
+			{
+				"resAccountTrTime": "033808",
+				"resAccountDesc4": "양평동",
+				"resAccountDesc3": "이자세금:원",
+				"resAccountDesc2": "결산이자",
+				"resAccountDesc1": "",
+				"resAccountTrDate": "20190511",
+				"resAccountOut": "0",
+				"resAfterTranBalance": "9970",
+				"resAccountIn": "11",
+				"tranDesc": ""
+			},
+			{
+				"resAccountTrTime": "203432",
+				"resAccountDesc4": "구로디",
+				"resAccountDesc3": "54780300024283  ,41회차",
+				"resAccountDesc2": "기일출금",
+				"resAccountDesc1": "",
+				"resAccountTrDate": "20190401",
+				"resAccountOut": "300000",
+				"resAfterTranBalance": "9959",
+				"resAccountIn": "0",
+				"tranDesc": ""
+			}
+		],
+		"resAccountHolder": "XXX",
+		"resManagementBranch": "양평동OOOO센터",
+		"resLastTranDate": ""
+	}
+}
