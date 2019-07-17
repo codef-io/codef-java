@@ -71,8 +71,8 @@ accountMap2.put("clientType",  	"P");
 accountMap2.put("organization",	"0020");
 accountMap2.put("loginType",  	"1");
 accountMap2.put("password",  	"INSERT END USER PASSWORD");
-accountMap2.put("id",  			"INSERT END USER ID");
-accountMap2.put("birthday",		"YYMMDD");
+accountMap2.put("id",  		"INSERT END USER ID");
+accountMap2.put("birthday",	"YYMMDD");
 list.add(accountMap2);
 
 bodyMap.put("accountList", list);
