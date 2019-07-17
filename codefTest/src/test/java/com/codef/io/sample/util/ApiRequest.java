@@ -12,8 +12,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  *  API 요청 템플릿 클래스
- * @author daejongkwak
- *
  */
 public class ApiRequest {
 

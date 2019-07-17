@@ -11,19 +11,18 @@ import com.codef.io.sample.util.CommonConstant;
 
 /**
  * 은행 법인 보유계좌	
- *
  */
 public class TestKR_BK_1_B_001 {
 	
 	@Test
 	public void testKR_BK_1_B_001() throws IOException, InterruptedException, ParseException {
 		// 요청 URL 설정
-		String urlPath = CommonConstant.TEST_DOMAIN + CommonConstant.KR_BK_1_B_001;
+		String urlPath = CommonConstant.API_DOMAIN + CommonConstant.KR_BK_1_B_001;
 		
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
-		bodyMap.put("connectedId", 	"9LUm.uhVQbzaangazwI0tr");	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
-		bodyMap.put("organization", "기관코드"); 					
+		bodyMap.put("connectedId",	"9LUm.uhVQbzaangazwI0tr");	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
+		bodyMap.put("organization",	"기관코드"); 					
 		// 요청 파라미터 설정 종료 
 		
 		// API 요청
