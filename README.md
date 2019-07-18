@@ -26,7 +26,7 @@ CODEF API를 사용하기 위해서는 'access_token' 발행이 선행되어야 
 String token_url = 'https://api.codef.io/oauth/token';
 String access_token = RequestToken.getToken("CODEF로부터 발급받은 클라이언트 아이디", "CODEF로부터 발급받은 시크릿 키");
 if (access_token != null){
-    System.out.println(raccess_token);
+    System.out.println(access_token);
 }    
 else{
     System.out.println('토큰발급 오류');
