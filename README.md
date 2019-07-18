@@ -25,11 +25,11 @@ CODEF API를 사용하기 위해서는 'access_token' 발행이 선행되어야 
 ```java
 String token_url = 'https://api.codef.io/oauth/token';
 String access_token = RequestToken.getToken("CODEF로부터 발급받은 클라이언트 아이디", "CODEF로부터 발급받은 시크릿 키");
-if (raccess_token != null){
-	System.out.println(raccess_token);
+if (access_token != null){
+    System.out.println(access_token);
 }    
 else{
-	System.out.println('토큰발급 오류');
+    System.out.println("토큰 발급 오류");
 }	
 ```
 ```json
@@ -267,8 +267,8 @@ String urlPath = CommonConstant.API_DOMAIN + CommonConstant.KR_BK_1_B_001;
 
 // 요청 파라미터 설정 시작
 HashMap<String, Object> bodyMap = new HashMap<String, Object>();
-bodyMap.put("connectedId", 	"9LUm.uhVQbzaangazwI0tr");	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
-bodyMap.put("organization", "기관코드"); 					
+bodyMap.put("connectedId",	"9LUm.uhVQbzaangazwI0tr");	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
+bodyMap.put("organization",	"기관코드"); 					
 // 요청 파라미터 설정 종료 
 
 // API 요청
