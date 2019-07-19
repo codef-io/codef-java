@@ -12,7 +12,7 @@ import org.junit.Test;
 import com.codef.io.sample.util.ApiRequest;
 import com.codef.io.sample.util.CommonConstant;
 
-/**
+/** 
  * 계정관리 테스트
  */
 public class AccountTest {
