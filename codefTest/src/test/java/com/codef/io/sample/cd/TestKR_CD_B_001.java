@@ -17,7 +17,7 @@ public class TestKR_CD_B_001 {
 	@Test
 	public void testKR_CD_B_001() throws IOException, InterruptedException, ParseException {
 		// 요청 URL 설정
-		String urlPath = CommonConstant.API_DOMAIN + CommonConstant.KR_CD_B_001;
+		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.KR_CD_B_001;
 		
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();

@@ -45,13 +45,23 @@ public class CommonConstant {
 	public static final String UPDATE_ACCOUNT = "/v1/account/update";            							// 계정 수정			
 	public static final String DELETE_ACCOUNT = "/v1/account/delete";            							// 계정 삭제			
 	
+	/**
+	 * API 요청 도메인 반환
+	 * @return
+	 */
+	public static String getRequestDomain() {
+		return CommonConstant.TEST_DOMAIN;
+	}
 	
 	
 	/**	CODEF로부터 발급받은 클라이언트 아이디	*/
 	public static final String CLIENT_ID 	= "CODEF로부터 발급받은 클라이언트 아이디";						
 	
 	/**	CODEF로부터 발급받은 시크릿 키	*/
-	public static final String SECERET_KEY 	= "CODEF로부터 발급받은 시크릿 키";												
+	public static final String SECERET_KEY 	= "CODEF로부터 발급받은 시크릿 키";
+	
+	/**	CODEF로부터 발급받은 퍼블릭 키	*/
+	public static final String PUBLIC_KEY 	= "CODEF로부터 발급받은 퍼블릭 키";
 	
 	/**	OAUTH2.0 토큰 샘플	*/
 	public static String ACCESS_TOKEN = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXJ2aWNlX3R5cGUiOiIwIiwic2NvcGUiOlsicmVhZCJdLCJzZXJ2aWNlX25vIjoiMDAwMDAwMDQyMDAxIiwiZXhwIjoxNTYzMzI3MzQ1LCJhdXRob3JpdGllcyI6WyJJTlNVUkFOQ0UiLCJQVUJMSUMiLCJCQU5LIiwiRVRDIiwiU1RPQ0siLCJDQVJEIl0sImp0aSI6ImFlZGIwY2FkLWU0NGYtNDRlNC04YTVmLTMxODFjMmZlOWE5NiIsImNsaWVudF9pZCI6ImNvZGVmX21hc3RlciJ9.VQb_mtyc6aa5AY1JNilvK2TmLitjHM8pwXckvAustNAcN-HOdtryu9k_x3BCnZE1GSd_cMXl57kev8LHnKlNQFTD3vo9wKrzMBDUT6kgXd4CoaduGAyb6VzMZH4M-wXzgCg8yuWuFKXKYq_ivs66qWtV-4s4Hh3IW-6TIa4BD58vztPvIfLsBka_dJ31YDSvs9FINUNMcSMCob9iFQbxy0FHKwb4jY65RaKEE570wTbJ3l-dyt7eg65c1R4bYvGx2iD6C7KJKTzVAYoGv8Bms26cF_qOKIS7ZDTMdx8MBpcJ0e2rjbhfj6BNl8re0W2nScSN_qPI_YLaoNWSWpeqbQ";

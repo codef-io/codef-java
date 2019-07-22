@@ -1,9 +1,16 @@
 package com.codef.io.sample;
 
 import java.io.IOException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 
 import org.json.simple.parser.ParseException;
 import org.junit.Ignore;
@@ -11,6 +18,7 @@ import org.junit.Test;
 
 import com.codef.io.sample.util.ApiRequest;
 import com.codef.io.sample.util.CommonConstant;
+import com.codef.io.sample.util.RSAUtil;
 
 /** 
  * 계정관리 테스트
@@ -22,11 +30,17 @@ public class AccountTest {
 	 * @throws ParseException 
 	 * @throws InterruptedException 
 	 * @throws IOException 
+	 * @throws BadPaddingException 
+	 * @throws IllegalBlockSizeException 
+	 * @throws NoSuchPaddingException 
+	 * @throws InvalidKeySpecException 
+	 * @throws NoSuchAlgorithmException 
+	 * @throws InvalidKeyException 
 	 */
 	@Test  @Ignore
-	public void create() throws IOException, InterruptedException, ParseException {
+	public void create() throws IOException, InterruptedException, ParseException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		/// 요청 URL 설정
-		String urlPath = CommonConstant.TEST_DOMAIN + CommonConstant.CREATE_ACCOUNT;	
+		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.CREATE_ACCOUNT;	
 		
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();	
@@ -38,7 +52,10 @@ public class AccountTest {
 		accountMap1.put("clientType",  	"P");
 		accountMap1.put("organization",	"0004");
 		accountMap1.put("loginType",  	"0");
-		accountMap1.put("password",  	"INSERT YOUR END USER PASSWORD");
+		
+		String password1 = "INSERT YOUR END USER PASSWORD";
+		accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+		
 		accountMap1.put("keyFile",  	"INSERT YOUR END USER keyFile to BASE64 Encoding String");
 		accountMap1.put("derFile",  	"INSERT YOUR END USER derFile to BASE64 Encoding String");
 		list.add(accountMap1);
@@ -49,7 +66,10 @@ public class AccountTest {
 		accountMap2.put("clientType",  	"P");
 		accountMap2.put("organization",	"0020");
 		accountMap2.put("loginType",  	"1");
-		accountMap2.put("password",  	"INSERT END USER PASSWORD");
+		
+		String password2 = "INSERT YOUR END USER PASSWORD";
+		accountMap1.put("password",  	RSAUtil.encryptRSA(password2, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+
 		accountMap2.put("id",  			"INSERT END USER ID");
 		accountMap2.put("birthday",		"YYMMDD");
 		list.add(accountMap2);
@@ -74,7 +94,7 @@ public class AccountTest {
 	@Test @Ignore
 	public void list() throws IOException, InterruptedException, ParseException {
 		// 요청 URL 설정
-		String urlPath = CommonConstant.TEST_DOMAIN + CommonConstant.GET_ACCOUNTS;	
+		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.GET_ACCOUNTS;	
 		
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
@@ -96,11 +116,17 @@ public class AccountTest {
 	 * @throws ParseException 
 	 * @throws InterruptedException 
 	 * @throws IOException 
+	 * @throws BadPaddingException 
+	 * @throws IllegalBlockSizeException 
+	 * @throws NoSuchPaddingException 
+	 * @throws InvalidKeySpecException 
+	 * @throws NoSuchAlgorithmException 
+	 * @throws InvalidKeyException 
 	 */
 	@Test @Ignore
-	public void add() throws IOException, InterruptedException, ParseException {
+	public void add() throws IOException, InterruptedException, ParseException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		// 요청 URL 설정
-		String urlPath = CommonConstant.TEST_DOMAIN + CommonConstant.ADD_ACCOUNT;	
+		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.ADD_ACCOUNT;	
 		
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
@@ -113,7 +139,10 @@ public class AccountTest {
 		accountMap1.put("clientType",  	"P");
 		accountMap1.put("organization",	"0020");
 		accountMap1.put("loginType",  	"0");
-		accountMap1.put("password",  	"INSERT YOUR END USER PASSWORD");
+		
+		String password1 = "INSERT YOUR END USER PASSWORD";
+		accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+		
 		accountMap1.put("keyFile",  	"INSERT YOUR END USER keyFile to BASE64 Encoding String");
 		accountMap1.put("derFile",  	"INSERT YOUR END USER derFile to BASE64 Encoding String");
 		list.add(accountMap1);
@@ -137,11 +166,17 @@ public class AccountTest {
 	 * @throws ParseException 
 	 * @throws InterruptedException 
 	 * @throws IOException 
+	 * @throws BadPaddingException 
+	 * @throws IllegalBlockSizeException 
+	 * @throws NoSuchPaddingException 
+	 * @throws InvalidKeySpecException 
+	 * @throws NoSuchAlgorithmException 
+	 * @throws InvalidKeyException 
 	 */
 	@Test @Ignore
-	public void update() throws IOException, InterruptedException, ParseException {
+	public void update() throws IOException, InterruptedException, ParseException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		// 요청 URL 설정
-		String urlPath = CommonConstant.TEST_DOMAIN + CommonConstant.UPDATE_ACCOUNT;	
+		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.UPDATE_ACCOUNT;	
 		
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
@@ -154,7 +189,10 @@ public class AccountTest {
 		accountMap1.put("clientType",  	"P");
 		accountMap1.put("organization",	"0020");
 		accountMap1.put("loginType",  	"0");
-		accountMap1.put("password",  	"INSERT YOUR END USER PASSWORD");
+		
+		String password1 = "INSERT YOUR END USER PASSWORD";
+		accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+		
 		accountMap1.put("keyFile",  	"INSERT YOUR END USER keyFile to BASE64 Encoding String");
 		accountMap1.put("derFile",  	"INSERT YOUR END USER derFile to BASE64 Encoding String");
 		list.add(accountMap1);
@@ -184,7 +222,7 @@ public class AccountTest {
 	@Test @Ignore
 	public void delete() throws IOException, InterruptedException, ParseException {
 		// 요청 URL 설정
-		String urlPath = CommonConstant.TEST_DOMAIN + CommonConstant.DELETE_ACCOUNT;	
+		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.DELETE_ACCOUNT;	
 		
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
