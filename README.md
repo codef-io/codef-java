@@ -59,7 +59,10 @@ accountMap1.put("businessType",	"BK");  // 업무구분코드
 accountMap1.put("clientType",  	"P");   // 고객구분(P: 개인, B: 기업)
 accountMap1.put("organization",	"0020");// 기관코드
 accountMap1.put("loginType",  	"0");   // 로그인타입 (0: 인증서, 1: ID/PW)
-accountMap1.put("password",     "INSERT YOUR END USER PASSWORD");
+
+String password1 = "INSERT YOUR END USER PASSWORD";
+accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+		
 accountMap1.put("keyFile",      "INSERT YOUR END USER keyFile to BASE64 Encoding String");
 accountMap1.put("derFile",      "INSERT YOUR END USER derFile to BASE64 Encoding String");
 list.add(accountMap1);
@@ -70,7 +73,10 @@ accountMap2.put("businessType",	"BK");
 accountMap2.put("clientType",  	"P");
 accountMap2.put("organization",	"0020");
 accountMap2.put("loginType",  	"1");
-accountMap2.put("password",  	"INSERT END USER PASSWORD");
+
+String password2 = "INSERT YOUR END USER PASSWORD";
+accountMap1.put("password",  	RSAUtil.encryptRSA(password2, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+
 accountMap2.put("id",  		"INSERT END USER ID");
 accountMap2.put("birthday",	"YYMMDD");
 list.add(accountMap2);
@@ -121,7 +127,10 @@ accountMap1.put("businessType",	"BK");  // 업무구분코드
 accountMap1.put("clientType",  	"P");   // 고객구분(P: 개인, B: 기업)
 accountMap1.put("organization",	"0020");// 기관코드
 accountMap1.put("loginType",  	"0");   // 로그인타입 (0: 인증서, 1: ID/PW)
-accountMap1.put("password",  	"INSERT YOUR END USER PASSWORD");
+
+String password1 = "INSERT YOUR END USER PASSWORD";
+accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+
 accountMap1.put("keyFile",  	"INSERT YOUR END USER keyFile to BASE64 Encoding String");
 accountMap1.put("derFile",  	"INSERT YOUR END USER derFile to BASE64 Encoding String");
 list.add(accountMap1);
@@ -173,7 +182,10 @@ accountMap1.put("businessType",	"BK");  // 업무구분코드
 accountMap1.put("clientType",  	"P");   // 고객구분(P: 개인, B: 기업)
 accountMap1.put("organization",	"0020");// 기관코드
 accountMap1.put("loginType",  	"0");   // 로그인타입 (0: 인증서, 1: ID/PW)
-accountMap1.put("password",     "INSERT YOUR END USER PASSWORD");
+
+String password1 = "INSERT YOUR END USER PASSWORD";
+accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+
 accountMap1.put("keyFile",      "INSERT YOUR END USER keyFile to BASE64 Encoding String");
 accountMap1.put("derFile",      "INSERT YOUR END USER derFile to BASE64 Encoding String");
 list.add(accountMap1);
