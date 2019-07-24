@@ -8,7 +8,7 @@ https://develpers.codef.io 를 통해 확인할 수 있습니다.
 
 ## CODEF API Env
 
-CODEF API는 원활한 개발을 위해 샌드박스, 개발, 운영 환경을 각각 제공한다.
+CODEF API는 원활한 개발을 위해 샌드박스, 개발, 운영 환경을 각각 제공합니다.
 
 - 샌드박스 : https://sandbox.codef.io
 - 개발 : https://development.codef.io
@@ -45,7 +45,9 @@ else{
 ### 계정 생성
 
 CODEF API를 사용하기 위해서는 엔드유저가 사용하는 대상기관의 인증수단 등록이 필요하며, 이를 통해 사용자마다 유니크한 'connected_id'를 발급받을 수 있습니다.
-이후에는 별도의 인증수단 전송 없이 'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다.
+이후에는 별도의 인증수단 전송 없이 'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다. 
+
+* API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
 
 ```java
 String urlPath = 'https://api.codef.io/v1/account/create';
