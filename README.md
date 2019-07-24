@@ -117,6 +117,8 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 계정 생성을 통해 발급받은 'connected_id'에 추가 기관의 인증수단을 등록할 수 있습니다. 추가 등록한 기관을 포함하여 이후에는 별도의 인증수단 전송없이
 'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다.
 
+* API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
+
 ```java
 String urlPath = 'https://api.codef.io/v1/account/add';
 
@@ -171,6 +173,8 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 
 계정 생성을 통해 발급받은 'connected_id'에 등록된 기관의 인증수단을 변경할 수 있습니다. 변경 요청한 기관의 인증 수단은 호출 즉시 변경되며, 이 후
 'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다.
+
+* API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
 
 ```java
 String urlPath = 'https://api.codef.io/v1/account/update';
@@ -227,6 +231,8 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 엔드유저가 등록된 계정의 삭제를 요청 시 'connected_id'에 등록된 기관의 인증수단을 즉시 삭제할 수 있습니다. 요청한 기관의 인증 수단은 호출 즉시 삭제되며,
 해당 데이터는 복구할 수 없습니다.
 
+* API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
+
 ```java
 String urlPath = 'https://api.codef.io/v1/account/delete';
 
@@ -273,6 +279,8 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 ### CODEF API(법인 보유계좌조회)
 
 발급받은 'connected_id' 를 통해 등록된 기관의 보유계좌를 조회할 수 있습니다.
+
+* API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
 
 TestKR_BK_1_B_001.java
 ```java
