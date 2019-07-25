@@ -45,8 +45,9 @@ else{
 ### 계정 생성
 
 CODEF API를 사용하기 위해서는 엔드유저가 사용하는 대상기관의 인증수단 등록이 필요하며, 이를 통해 사용자마다 유니크한 'connected_id'를 발급받을 수 있습니다.
-이후에는 별도의 인증수단 전송 없이 'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다. 
+이후에는 별도의 인증수단 전송 없이 'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다. 'connected_id' 발급은 최초 계정 생성 요청시에만 가능하며 이후에 엔드유저의 인증수단 관리는 계정 추가, 계정 수정, 계정 삭제 거래를 이용해야 합니다. 
 
+* 은행/카드 업무의 경우 동일한 기관에 등록 가능한 인증수단은 개인 고객/기업 고객 각각 1건입니다.
 * API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
 
 ```java
@@ -59,27 +60,27 @@ HashMap<String, Object> accountMap1 = new HashMap<String, Object>();
 accountMap1.put("countryCode",	"KR");  // 국가코드
 accountMap1.put("businessType",	"BK");  // 업무구분코드
 accountMap1.put("clientType",  	"P");   // 고객구분(P: 개인, B: 기업)
-accountMap1.put("organization",	"0020");// 기관코드
+accountMap1.put("organization",	"0003");// 기관코드
 accountMap1.put("loginType",  	"0");   // 로그인타입 (0: 인증서, 1: ID/PW)
 
-String password1 = "INSERT YOUR END USER PASSWORD";
+String password1 = "엔드유저의 인증서 비밀번호";
 accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
 		
-accountMap1.put("keyFile",      "INSERT YOUR END USER keyFile to BASE64 Encoding String");
-accountMap1.put("derFile",      "INSERT YOUR END USER derFile to BASE64 Encoding String");
+accountMap1.put("keyFile",      "BASE64로 Encoding된 엔드유저의 인증서 key파일 문자열");
+accountMap1.put("derFile",      "BASE64로 Encoding된 엔드유저의 인증서 der파일 문자열");
 list.add(accountMap1);
 
 HashMap<String, Object> accountMap2 = new HashMap<String, Object>();
 accountMap2.put("countryCode",	"KR");
 accountMap2.put("businessType",	"BK");
 accountMap2.put("clientType",  	"P");
-accountMap2.put("organization",	"0020");
+accountMap2.put("organization",	"0004");
 accountMap2.put("loginType",  	"1");
 
-String password2 = "INSERT YOUR END USER PASSWORD";
+String password2 = "엔드유저의 기관 로그인 비밀번호";
 accountMap1.put("password",  	RSAUtil.encryptRSA(password2, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
 
-accountMap2.put("id",  		"INSERT END USER ID");
+accountMap2.put("id",  		"엔드 유저의 기관 로그인 아이디");
 accountMap2.put("birthday",	"YYMMDD");
 list.add(accountMap2);
 
@@ -101,6 +102,14 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
       "code" : "CF-00000",
       "loginType" : "0",
       "countryCode" : "KR",
+      "organization" : "0003",
+      "businessType" : "BK",
+      "message" : "성공"
+    }, {
+      "clientType" : "P",
+      "code" : "CF-00000",
+      "loginType" : "1",
+      "countryCode" : "KR",
       "organization" : "0004",
       "businessType" : "BK",
       "message" : "성공"
@@ -117,6 +126,7 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 계정 생성을 통해 발급받은 'connected_id'에 추가 기관의 인증수단을 등록할 수 있습니다. 추가 등록한 기관을 포함하여 이후에는 별도의 인증수단 전송없이
 'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다.
 
+* 은행/카드 업무의 경우 동일한 기관에 등록 가능한 인증수단은 개인 고객/기업 고객 각각 1건입니다.
 * API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
 
 ```java
@@ -132,14 +142,17 @@ accountMap1.put("clientType",  	"P");   // 고객구분(P: 개인, B: 기업)
 accountMap1.put("organization",	"0020");// 기관코드
 accountMap1.put("loginType",  	"0");   // 로그인타입 (0: 인증서, 1: ID/PW)
 
-String password1 = "INSERT YOUR END USER PASSWORD";
+String password1 = "엔드유저의 인증서 비밀번호";
 accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
-
-accountMap1.put("keyFile",  	"INSERT YOUR END USER keyFile to BASE64 Encoding String");
-accountMap1.put("derFile",  	"INSERT YOUR END USER derFile to BASE64 Encoding String");
+		
+accountMap1.put("keyFile",      "BASE64로 Encoding된 엔드유저의 인증서 key파일 문자열");
+accountMap1.put("derFile",      "BASE64로 Encoding된 엔드유저의 인증서 der파일 문자열");
 list.add(accountMap1);
 
 bodyMap.put("accountList", list);
+		
+String connectedId = "엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 입력";
+bodyMap.put(CommonConstant.CONNECTED_ID, connectedId);
 
 
 # CODEF API 호출
@@ -189,14 +202,17 @@ accountMap1.put("clientType",  	"P");   // 고객구분(P: 개인, B: 기업)
 accountMap1.put("organization",	"0020");// 기관코드
 accountMap1.put("loginType",  	"0");   // 로그인타입 (0: 인증서, 1: ID/PW)
 
-String password1 = "INSERT YOUR END USER PASSWORD";
+String password1 = "엔드유저의 인증서 비밀번호";
 accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
-
-accountMap1.put("keyFile",      "INSERT YOUR END USER keyFile to BASE64 Encoding String");
-accountMap1.put("derFile",      "INSERT YOUR END USER derFile to BASE64 Encoding String");
+		
+accountMap1.put("keyFile",      "BASE64로 Encoding된 엔드유저의 인증서 key파일 문자열");
+accountMap1.put("derFile",      "BASE64로 Encoding된 엔드유저의 인증서 der파일 문자열");
 list.add(accountMap1);
 
 bodyMap.put("accountList", list);
+		
+String connectedId = "엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 입력";
+bodyMap.put(CommonConstant.CONNECTED_ID, connectedId);
 
 
 # CODEF API 호출
@@ -249,6 +265,9 @@ list.add(accountMap1);
 
 bodyMap.put("accountList", list);
 
+String connectedId = "엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 입력";
+bodyMap.put(CommonConstant.CONNECTED_ID, connectedId);
+
 
 # CODEF API 호출
 String result = ApiRequest.reqeust(urlPath, bodyMap);
@@ -274,6 +293,122 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 ```
 
 
+### 계정 목록 조회
+
+계정 등록, 추가 등을 통해 CODEF에 등록된 엔드 유저의 인증수단 정보 목록에 대한 조회를 요청할 수 있습니다. 엔드유저에 대한 유니크한 식별값인 'connectedId'를 요청 파라미터로 사용하며 해당 'connectedId'에 연결된 인증수단 정보 목록을 반환합니다.
+
+* API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
+
+```java
+String urlPath = 'https://api.codef.io/v1/account/list';
+
+HashMap<String, Object> bodyMap = new HashMap<String, Object>();	
+
+String connectedId = "엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 입력";
+bodyMap.put(CommonConstant.CONNECTED_ID, connectedId);
+
+# CODEF API 호출
+String result = ApiRequest.reqeust(urlPath, bodyMap);
+```
+```json
+{
+  "result" : {
+    "code" : "CF-00000",
+    "extraMessage" : "",
+    "message" : "성공"
+  },
+  "data" : {
+    "accountList" : [ {
+      "clientType" : "B",
+      "organizationCode" : "0003",
+      "loginType" : "0",
+      "countryCode" : "KR",
+      "businessType" : "BK"
+    }, {
+      "clientType" : "B",
+      "organizationCode" : "0004",
+      "loginType" : "0",
+      "countryCode" : "KR",
+      "businessType" : "BK"
+    }, {
+      "clientType" : "P",
+      "organizationCode" : "0004",
+      "loginType" : "0",
+      "countryCode" : "KR",
+      "businessType" : "BK"
+    }, {
+      "clientType" : "B",
+      "organizationCode" : "0011",
+      "loginType" : "0",
+      "countryCode" : "KR",
+      "businessType" : "BK"
+    }, {
+      "clientType" : "P",
+      "organizationCode" : "0020",
+      "loginType" : "1",
+      "countryCode" : "KR",
+      "businessType" : "BK"
+    }, {
+      "clientType" : "B",
+      "organizationCode" : "0301",
+      "loginType" : "0",
+      "countryCode" : "KR",
+      "businessType" : "CD"
+    }, {
+      "clientType" : "P",
+      "organizationCode" : "0302",
+      "loginType" : "0",
+      "countryCode" : "KR",
+      "businessType" : "CD"
+    }, {
+      "clientType" : "B",
+      "organizationCode" : "0309",
+      "loginType" : "0",
+      "countryCode" : "KR",
+      "businessType" : "CD"
+    }, {
+      "clientType" : "P",
+      "organizationCode" : "0309",
+      "loginType" : "0",
+      "countryCode" : "KR",
+      "businessType" : "CD"
+    } ],
+    "connectedId" : "bybF-S85kX998Trh23JUVb"
+  }
+}
+```
+
+
+### 'connectedId' 목록 조회
+
+CODEF로부터 발급된 'connectedId'의 목록에 대한 조회를 요청할 수 있습니다. 요청 결과는 페이징(5만건) 단위로 전송되며 결과 값(hasNext == true)에 따라 다음 페이지(nextPageNo)에 대한 요청이 가능합니다. 
+
+* API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
+
+```java
+String urlPath = 'https://api.codef.io/v1/account/connectedId-list';
+
+HashMap<String, Object> bodyMap = new HashMap<String, Object>();	
+bodyMap.put(CommonConstant.PAGE_NO, 0);	// 페이지 번호. 생략시 1페이지 값(0)으로 설정
+
+# CODEF API 호출
+String result = ApiRequest.reqeust(urlPath, bodyMap);
+```
+```json
+{
+  "result" : {
+    "code" : "CF-00000",
+    "extraMessage" : "",
+    "message" : "성공"
+  },
+  "data" : {
+    "connectedIdList" : [ "6OOOZ58zAU.aX0pRRgzEBk", "bybF-S85kX998Trh23JUVb" ],
+    "pageNo" : 0,
+    "hasNext" : true,
+    "nextPageNo" : 1
+  }
+}
+```
 
 
 ### CODEF API(법인 보유계좌조회)
