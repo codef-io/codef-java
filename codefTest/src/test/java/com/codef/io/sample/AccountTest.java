@@ -99,8 +99,8 @@ public class AccountTest {
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
 		
-		String client_id = "45t4DJOD44M9uwH7zxSgBg";	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시 
-		bodyMap.put(CommonConstant.CONNECTED_ID, client_id);
+		String connectedId = "45t4DJOD44M9uwH7zxSgBg";	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시 
+		bodyMap.put(CommonConstant.CONNECTED_ID, connectedId);
 		// 요청 파라미터 설정 종료
 		
 		// API 요청
@@ -149,8 +149,8 @@ public class AccountTest {
 		
 		bodyMap.put("accountList", list);
 		
-		String client_id = "45t4DJOD44M9uwH7zxSgBg";	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
-		bodyMap.put(CommonConstant.CONNECTED_ID, client_id);
+		String connectedId = "45t4DJOD44M9uwH7zxSgBg";	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
+		bodyMap.put(CommonConstant.CONNECTED_ID, connectedId);
 		// 요청 파라미터 설정 종료
 
 		// API 요청
@@ -199,8 +199,8 @@ public class AccountTest {
 		
 		bodyMap.put("accountList", list);
 		
-		String client_id = "45t4DJOD44M9uwH7zxSgBg";	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
-		bodyMap.put(CommonConstant.CONNECTED_ID, client_id);
+		String connectedId = "45t4DJOD44M9uwH7zxSgBg";	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
+		bodyMap.put(CommonConstant.CONNECTED_ID, connectedId);
 		// 요청 파라미터 설정 종료
 
 		// API 요청
@@ -239,8 +239,8 @@ public class AccountTest {
 		
 		bodyMap.put("accountList", list);
 		
-		String client_id = "45t4DJOD44M9uwH7zxSgBg";	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
-		bodyMap.put(CommonConstant.CONNECTED_ID, client_id);
+		String connectedId = "45t4DJOD44M9uwH7zxSgBg";	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
+		bodyMap.put(CommonConstant.CONNECTED_ID, connectedId);
 		// 요청 파라미터 설정 종료
 
 		// API 요청
