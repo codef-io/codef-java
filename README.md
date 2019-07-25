@@ -8,7 +8,7 @@ https://develpers.codef.io 를 통해 확인할 수 있습니다.
 
 ## CODEF API Env
 
-CODEF API는 원활한 개발을 위해 샌드박스, 개발, 운영 환경을 각각 제공한다.
+CODEF API는 원활한 개발을 위해 샌드박스, 개발, 운영 환경을 각각 제공합니다.
 
 - 샌드박스 : https://sandbox.codef.io
 - 개발 : https://development.codef.io
@@ -45,7 +45,9 @@ else{
 ### 계정 생성
 
 CODEF API를 사용하기 위해서는 엔드유저가 사용하는 대상기관의 인증수단 등록이 필요하며, 이를 통해 사용자마다 유니크한 'connected_id'를 발급받을 수 있습니다.
-이후에는 별도의 인증수단 전송 없이 'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다.
+이후에는 별도의 인증수단 전송 없이 'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다. 
+
+* API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
 
 ```java
 String urlPath = 'https://api.codef.io/v1/account/create';
@@ -59,7 +61,10 @@ accountMap1.put("businessType",	"BK");  // 업무구분코드
 accountMap1.put("clientType",  	"P");   // 고객구분(P: 개인, B: 기업)
 accountMap1.put("organization",	"0020");// 기관코드
 accountMap1.put("loginType",  	"0");   // 로그인타입 (0: 인증서, 1: ID/PW)
-accountMap1.put("password",     "INSERT YOUR END USER PASSWORD");
+
+String password1 = "INSERT YOUR END USER PASSWORD";
+accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+		
 accountMap1.put("keyFile",      "INSERT YOUR END USER keyFile to BASE64 Encoding String");
 accountMap1.put("derFile",      "INSERT YOUR END USER derFile to BASE64 Encoding String");
 list.add(accountMap1);
@@ -70,7 +75,10 @@ accountMap2.put("businessType",	"BK");
 accountMap2.put("clientType",  	"P");
 accountMap2.put("organization",	"0020");
 accountMap2.put("loginType",  	"1");
-accountMap2.put("password",  	"INSERT END USER PASSWORD");
+
+String password2 = "INSERT YOUR END USER PASSWORD";
+accountMap1.put("password",  	RSAUtil.encryptRSA(password2, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+
 accountMap2.put("id",  		"INSERT END USER ID");
 accountMap2.put("birthday",	"YYMMDD");
 list.add(accountMap2);
@@ -109,6 +117,8 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 계정 생성을 통해 발급받은 'connected_id'에 추가 기관의 인증수단을 등록할 수 있습니다. 추가 등록한 기관을 포함하여 이후에는 별도의 인증수단 전송없이
 'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다.
 
+* API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
+
 ```java
 String urlPath = 'https://api.codef.io/v1/account/add';
 
@@ -121,7 +131,10 @@ accountMap1.put("businessType",	"BK");  // 업무구분코드
 accountMap1.put("clientType",  	"P");   // 고객구분(P: 개인, B: 기업)
 accountMap1.put("organization",	"0020");// 기관코드
 accountMap1.put("loginType",  	"0");   // 로그인타입 (0: 인증서, 1: ID/PW)
-accountMap1.put("password",  	"INSERT YOUR END USER PASSWORD");
+
+String password1 = "INSERT YOUR END USER PASSWORD";
+accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+
 accountMap1.put("keyFile",  	"INSERT YOUR END USER keyFile to BASE64 Encoding String");
 accountMap1.put("derFile",  	"INSERT YOUR END USER derFile to BASE64 Encoding String");
 list.add(accountMap1);
@@ -161,6 +174,8 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 계정 생성을 통해 발급받은 'connected_id'에 등록된 기관의 인증수단을 변경할 수 있습니다. 변경 요청한 기관의 인증 수단은 호출 즉시 변경되며, 이 후
 'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다.
 
+* API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
+
 ```java
 String urlPath = 'https://api.codef.io/v1/account/update';
 
@@ -173,7 +188,10 @@ accountMap1.put("businessType",	"BK");  // 업무구분코드
 accountMap1.put("clientType",  	"P");   // 고객구분(P: 개인, B: 기업)
 accountMap1.put("organization",	"0020");// 기관코드
 accountMap1.put("loginType",  	"0");   // 로그인타입 (0: 인증서, 1: ID/PW)
-accountMap1.put("password",     "INSERT YOUR END USER PASSWORD");
+
+String password1 = "INSERT YOUR END USER PASSWORD";
+accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+
 accountMap1.put("keyFile",      "INSERT YOUR END USER keyFile to BASE64 Encoding String");
 accountMap1.put("derFile",      "INSERT YOUR END USER derFile to BASE64 Encoding String");
 list.add(accountMap1);
@@ -212,6 +230,8 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 
 엔드유저가 등록된 계정의 삭제를 요청 시 'connected_id'에 등록된 기관의 인증수단을 즉시 삭제할 수 있습니다. 요청한 기관의 인증 수단은 호출 즉시 삭제되며,
 해당 데이터는 복구할 수 없습니다.
+
+* API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
 
 ```java
 String urlPath = 'https://api.codef.io/v1/account/delete';
@@ -259,6 +279,8 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 ### CODEF API(법인 보유계좌조회)
 
 발급받은 'connected_id' 를 통해 등록된 기관의 보유계좌를 조회할 수 있습니다.
+
+* API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
 
 TestKR_BK_1_B_001.java
 ```java
