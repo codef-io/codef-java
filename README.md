@@ -59,7 +59,7 @@ HashMap<String, Object> accountMap1 = new HashMap<String, Object>();
 accountMap1.put("countryCode",	"KR");  // 국가코드
 accountMap1.put("businessType",	"BK");  // 업무구분코드
 accountMap1.put("clientType",  	"P");   // 고객구분(P: 개인, B: 기업)
-accountMap1.put("organization",	"0020");// 기관코드
+accountMap1.put("organization",	"0003");// 기관코드
 accountMap1.put("loginType",  	"0");   // 로그인타입 (0: 인증서, 1: ID/PW)
 
 String password1 = "INSERT YOUR END USER PASSWORD";
@@ -73,7 +73,7 @@ HashMap<String, Object> accountMap2 = new HashMap<String, Object>();
 accountMap2.put("countryCode",	"KR");
 accountMap2.put("businessType",	"BK");
 accountMap2.put("clientType",  	"P");
-accountMap2.put("organization",	"0020");
+accountMap2.put("organization",	"0004");
 accountMap2.put("loginType",  	"1");
 
 String password2 = "INSERT YOUR END USER PASSWORD";
@@ -100,6 +100,14 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
       "clientType" : "P",
       "code" : "CF-00000",
       "loginType" : "0",
+      "countryCode" : "KR",
+      "organization" : "0003",
+      "businessType" : "BK",
+      "message" : "성공"
+    }, {
+      "clientType" : "P",
+      "code" : "CF-00000",
+      "loginType" : "1",
       "countryCode" : "KR",
       "organization" : "0004",
       "businessType" : "BK",
