@@ -389,7 +389,7 @@ CODEF로부터 발급된 'connectedId'의 목록에 대한 조회를 요청할 �
 String urlPath = 'https://api.codef.io/v1/account/connectedId-list';
 
 HashMap<String, Object> bodyMap = new HashMap<String, Object>();	
-bodyMap.put(CommonConstant.PAGE_NO, 5);	// 페이지 번호. 생략시 1페이지 값(0)으로 설정
+bodyMap.put(CommonConstant.PAGE_NO, 0);	// 페이지 번호. 생략시 1페이지 값(0)으로 설정
 
 # CODEF API 호출
 String result = ApiRequest.reqeust(urlPath, bodyMap);
@@ -403,9 +403,9 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
   },
   "data" : {
     "connectedIdList" : [ "6OOOZ58zAU.aX0pRRgzEBk", "bybF-S85kX998Trh23JUVb" ],
-    "pageNo" : 1,
+    "pageNo" : 0,
     "hasNext" : true,
-    "nextPageNo" : 2
+    "nextPageNo" : 1
   }
 }
 ```
