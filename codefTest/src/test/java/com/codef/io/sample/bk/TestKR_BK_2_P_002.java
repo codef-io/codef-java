@@ -24,6 +24,7 @@ public class TestKR_BK_2_P_002 {
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
 		bodyMap.put("connectedId",	"9LUm.uhVQbzaangazwI0tr");	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
 		bodyMap.put("organization",	"기관코드"); 
+		bodyMap.put("bankName",		"<저축은행 중앙회 모듈 필수: [서브도메인 명]>");
 		bodyMap.put("account",		"계좌번호");
 		bodyMap.put("startDate",	"조회시작일자");
 		bodyMap.put("endDate",		"조회종료일자");

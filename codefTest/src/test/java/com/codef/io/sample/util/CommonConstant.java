@@ -12,6 +12,7 @@ public class CommonConstant {
 	
 	
 	public static final String CONNECTED_ID = "connectedId";												// 유저 식별 연결 아이디
+	public static final String PAGE_NO 		= "pageNo";														// 페이지 번호
 	                                                                                                        
 	public static final String KR_BK_1_B_001	= "/v1/kr/bank/b/account/account-list";                     // 은행 법인 보유계좌
 	public static final String KR_BK_1_B_002	= "/v1/kr/bank/b/account/transaction-list";                 // 은행 법인 수시입출 거래내역
@@ -39,6 +40,7 @@ public class CommonConstant {
 	public static final String KR_CD_P_004	= "/v1/kr/card/p/account/limit";                                // 카드 개인 한도조회
 	              
 	
+	public static final String GET_CONNECTED_IDS = "/v1/account/connectedId-list";       					// 커넥티드아이디 목록 조회			
 	public static final String GET_ACCOUNTS = "/v1/account/list";            								// 계정 목록 조회			
 	public static final String CREATE_ACCOUNT = "/v1/account/create";            							// 계정 등록(커넥티드아이디 발급)			
 	public static final String ADD_ACCOUNT = "/v1/account/add";            									// 계정 추가			

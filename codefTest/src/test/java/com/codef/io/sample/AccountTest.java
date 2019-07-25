@@ -53,11 +53,11 @@ public class AccountTest {
 		accountMap1.put("organization",	"0004");
 		accountMap1.put("loginType",  	"0");
 		
-		String password1 = "INSERT YOUR END USER PASSWORD";
+		String password1 = "엔드유저의 인증서 비밀번호";
 		accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
-		
-		accountMap1.put("keyFile",  	"INSERT YOUR END USER keyFile to BASE64 Encoding String");
-		accountMap1.put("derFile",  	"INSERT YOUR END USER derFile to BASE64 Encoding String");
+				
+		accountMap1.put("keyFile",      "BASE64로 Encoding된 엔드유저의 인증서 key파일 문자열");
+		accountMap1.put("derFile",      "BASE64로 Encoding된 엔드유저의 인증서 der파일 문자열");
 		list.add(accountMap1);
 		
 		HashMap<String, Object> accountMap2 = new HashMap<String, Object>();
@@ -67,10 +67,10 @@ public class AccountTest {
 		accountMap2.put("organization",	"0020");
 		accountMap2.put("loginType",  	"1");
 		
-		String password2 = "INSERT YOUR END USER PASSWORD";
+		String password2 = "엔드유저의 기관 로그인 비밀번호";
 		accountMap1.put("password",  	RSAUtil.encryptRSA(password2, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
 
-		accountMap2.put("id",  			"INSERT END USER ID");
+		accountMap2.put("id",  			"엔드 유저의 기관 로그인 아이디");
 		accountMap2.put("birthday",		"YYMMDD");
 		list.add(accountMap2);
 		
@@ -99,8 +99,32 @@ public class AccountTest {
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
 		
-		String connectedId = "45t4DJOD44M9uwH7zxSgBg";	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시 
+		String connectedId = "45t4DJOD44M9uwH7zxSgBg";	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
 		bodyMap.put(CommonConstant.CONNECTED_ID, connectedId);
+		// 요청 파라미터 설정 종료
+		
+		// API 요청
+		String result = ApiRequest.reqeust(urlPath, bodyMap);
+		
+		// 응답결과 확인
+		System.out.println(result);
+	}
+
+	/**	
+	 * connectedId 목록조회
+	 * 
+	 * @throws IOException
+	 * @throws InterruptedException
+	 * @throws ParseException
+	 */
+	@Test @Ignore
+	public void connectedIdList() throws IOException, InterruptedException, ParseException {
+		// 요청 URL 설정
+		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.GET_CONNECTED_IDS;	
+		
+		// 요청 파라미터 설정 시작
+		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
+		bodyMap.put(CommonConstant.PAGE_NO, 0);		// 페이지 번호(생략 가능) 생략시 1페이지 값(0) 자동 설정
 		// 요청 파라미터 설정 종료
 		
 		// API 요청
@@ -140,11 +164,11 @@ public class AccountTest {
 		accountMap1.put("organization",	"0020");
 		accountMap1.put("loginType",  	"0");
 		
-		String password1 = "INSERT YOUR END USER PASSWORD";
+		String password1 = "엔드유저의 인증서 비밀번호";
 		accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
-		
-		accountMap1.put("keyFile",  	"INSERT YOUR END USER keyFile to BASE64 Encoding String");
-		accountMap1.put("derFile",  	"INSERT YOUR END USER derFile to BASE64 Encoding String");
+				
+		accountMap1.put("keyFile",      "BASE64로 Encoding된 엔드유저의 인증서 key파일 문자열");
+		accountMap1.put("derFile",      "BASE64로 Encoding된 엔드유저의 인증서 der파일 문자열");
 		list.add(accountMap1);
 		
 		bodyMap.put("accountList", list);
@@ -190,11 +214,11 @@ public class AccountTest {
 		accountMap1.put("organization",	"0020");
 		accountMap1.put("loginType",  	"0");
 		
-		String password1 = "INSERT YOUR END USER PASSWORD";
+		String password1 = "엔드유저의 인증서 비밀번호";
 		accountMap1.put("password",  	RSAUtil.encryptRSA(password1, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
-		
-		accountMap1.put("keyFile",  	"INSERT YOUR END USER keyFile to BASE64 Encoding String");
-		accountMap1.put("derFile",  	"INSERT YOUR END USER derFile to BASE64 Encoding String");
+				
+		accountMap1.put("keyFile",      "BASE64로 Encoding된 엔드유저의 인증서 key파일 문자열");
+		accountMap1.put("derFile",      "BASE64로 Encoding된 엔드유저의 인증서 der파일 문자열");
 		list.add(accountMap1);
 		
 		bodyMap.put("accountList", list);
