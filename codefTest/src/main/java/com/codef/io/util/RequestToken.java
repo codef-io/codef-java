@@ -46,7 +46,7 @@ public class RequestToken {
 			String authStringEnc = new String(authEncBytes);
 			String authHeader = "Basic " + authStringEnc;
 			
-			System.out.println("[RequestToken] Authorization :: " + authHeader);
+			System.out.println("Authorization :: " + authHeader);
 	
 			con.setRequestProperty("Authorization", authHeader);
 			con.setDoOutput(true);
@@ -59,13 +59,13 @@ public class RequestToken {
 	
 			// 응답 코드 확인
 			int responseCode = con.getResponseCode();
-			System.out.println("[RequestToken] POST Response Code :: " + responseCode + "	message ::" + con.getResponseMessage());
+			System.out.println("POST Response Code :: " + responseCode + "	message ::" + con.getResponseMessage());
 	
 			BufferedReader br;
 			if (responseCode == HttpURLConnection.HTTP_OK) {	// 정상 응답
 				br = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			} else {	 // 에러 발생
-				System.out.println("[RequestToken] POST request not worked");
+				System.out.println("POST request not worked");
 				br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
 			}
 			
@@ -86,7 +86,7 @@ public class RequestToken {
 			JSONObject tokenJson = (JSONObject)obj;
 			
 			// 토큰 확인
-			System.out.println("[RequestToken] access_token : " + new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(tokenJson));
+			System.out.println("access_token : " + new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(tokenJson));
 			
 			// 토큰 반환
 			return tokenJson.get("access_token").toString();

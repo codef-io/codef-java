@@ -40,13 +40,13 @@ public class HttpRequest {
 
 			// 응답 코드 확인
 			int responseCode = con.getResponseCode();
-			System.out.println("[HttpRequest] POST Response Code :: " + responseCode + "	message ::" + con.getResponseMessage());
+			System.out.println("POST Response Code :: " + responseCode + "	message ::" + con.getResponseMessage());
 
 			BufferedReader br;
 			if (responseCode == HttpURLConnection.HTTP_OK) { // 정상 응답
 				br = new BufferedReader(new InputStreamReader(con.getInputStream())); 
 			} else { // 에러 발생
-				System.out.println("[RequestToken] POST request not worked");
+				System.out.println("POST request not worked");
 				br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
 			}
 			
@@ -59,7 +59,7 @@ public class HttpRequest {
 			br.close();
 			
 			// 응답 문자열 확인
-			System.out.println("RESPONSE_STRING : " + URLDecoder.decode(response.toString(), "UTF-8"));
+//			System.out.println("RESPONSE_STRING : " + URLDecoder.decode(response.toString(), "UTF-8"));
 
 			// 응답 문자열 인코딩, JSONObject 변환
 			JSONParser parser = new JSONParser();

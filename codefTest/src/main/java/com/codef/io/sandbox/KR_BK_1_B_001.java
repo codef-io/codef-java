@@ -25,7 +25,5 @@ public class KR_BK_1_B_001 {
 		// API 요청
 		String result = SandboxApiRequest.reqeust(urlPath, bodyMap);	//  샌드박스 요청 오브젝트 사용
 		
-		// 응답결과 확인
-		System.out.println(result);
 	}
 }
