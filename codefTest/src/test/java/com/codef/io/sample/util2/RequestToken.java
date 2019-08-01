@@ -1,4 +1,4 @@
-package com.codef.io.sample.util;
+package com.codef.io.sample.util2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,6 +15,7 @@ import org.json.simple.parser.ParseException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 
+import com.codef.io.util.CommonConstant;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**

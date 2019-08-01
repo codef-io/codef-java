@@ -6,8 +6,8 @@ import java.util.HashMap;
 import org.json.simple.parser.ParseException;
 import org.junit.Test;
 
-import com.codef.io.sample.util.ApiRequest;
-import com.codef.io.sample.util.CommonConstant;
+import com.codef.io.util.ApiRequest;
+import com.codef.io.util.CommonConstant;
 
 /**
  * 저축 은행 개인 거래내역	

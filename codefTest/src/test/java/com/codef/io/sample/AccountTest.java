@@ -16,9 +16,9 @@ import org.json.simple.parser.ParseException;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.codef.io.sample.util.ApiRequest;
-import com.codef.io.sample.util.CommonConstant;
-import com.codef.io.sample.util.RSAUtil;
+import com.codef.io.util.ApiRequest;
+import com.codef.io.util.CommonConstant;
+import com.codef.io.util.RSAUtil;
 
 /** 
  * 계정관리 테스트

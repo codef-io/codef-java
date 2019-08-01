@@ -1,4 +1,4 @@
-package com.codef.io.sample.util;
+package com.codef.io.sample.util2;
 
 import java.io.IOException;
 import java.net.URLEncoder;
@@ -8,6 +8,9 @@ import org.apache.commons.lang3.StringUtils;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
+import com.codef.io.util.CommonConstant;
+import com.codef.io.util.HttpRequest;
+import com.codef.io.util.RequestToken;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**

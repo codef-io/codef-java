@@ -1,4 +1,4 @@
-package com.codef.io.sample.util;
+package com.codef.io.sample.util2;
 
 /**
  *	상수 클래스 

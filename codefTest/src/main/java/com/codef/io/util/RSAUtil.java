@@ -1,4 +1,4 @@
-package com.codef.io.sample.util;
+package com.codef.io.util;
 
 import java.security.InvalidKeyException;
 import java.security.KeyFactory;

@@ -1,4 +1,4 @@
-package com.codef.io.sample.util;
+package com.codef.io.util;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -26,6 +26,7 @@ public class HttpRequest {
 			con.setDoOutput(true);
 			con.setRequestMethod("POST");
 			con.setRequestProperty(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
+			con.setRequestProperty(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
 
 			if (token != null) {
 				con.setRequestProperty("Authorization", "Bearer " + token);		// 엑세스 토큰 헤더 설정
