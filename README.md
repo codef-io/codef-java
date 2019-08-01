@@ -44,8 +44,8 @@ else{
 
 ### 계정 생성
 
-CODEF API를 사용하기 위해서는 엔드유저가 사용하는 대상기관의 인증수단 등록이 필요하며, 이를 통해 사용자마다 유니크한 'connected_id'를 발급받을 수 있습니다.
-이후에는 별도의 인증수단 전송 없이 'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다. 'connected_id' 발급은 최초 계정 생성 요청시에만 가능하며 이후에 엔드유저의 인증수단 관리는 계정 추가, 계정 수정, 계정 삭제 거래를 이용해야 합니다. 
+CODEF API를 사용하기 위해서는 엔드유저가 사용하는 대상기관의 인증수단 등록이 필요하며, 이를 통해 사용자마다 유니크한 'connectedId'를 발급받을 수 있습니다.
+이후에는 별도의 인증수단 전송 없이 'connectedId'를 통해서 대상기관의 데이터를 연동할 수 있습니다. 'connectedId' 발급은 최초 계정 생성 요청시에만 가능하며 이후에 엔드유저의 인증수단 관리는 계정 추가, 계정 수정, 계정 삭제 거래를 이용해야 합니다. 
 
 * 은행/카드 업무의 경우 동일한 기관에 등록 가능한 인증수단은 개인 고객/기업 고객 각각 1건입니다.
 * API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
@@ -123,8 +123,8 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 
 ### 계정 추가
 
-계정 생성을 통해 발급받은 'connected_id'에 추가 기관의 인증수단을 등록할 수 있습니다. 추가 등록한 기관을 포함하여 이후에는 별도의 인증수단 전송없이
-'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다.
+계정 생성을 통해 발급받은 'connectedId'에 추가 기관의 인증수단을 등록할 수 있습니다. 추가 등록한 기관을 포함하여 이후에는 별도의 인증수단 전송없이
+'connectedId'를 통해서 대상기관의 데이터를 연동할 수 있습니다.
 
 * 은행/카드 업무의 경우 동일한 기관에 등록 가능한 인증수단은 개인 고객/기업 고객 각각 1건입니다.
 * API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
@@ -152,7 +152,7 @@ list.add(accountMap1);
 bodyMap.put("accountList", list);
 		
 String connectedId = "엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 입력";
-bodyMap.put(CommonConstant.CONNECTED_ID, connectedId);
+bodyMap.put(CommonConstant.connectedId, connectedId);
 
 
 # CODEF API 호출
@@ -184,8 +184,8 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 
 ### 계정 수정
 
-계정 생성을 통해 발급받은 'connected_id'에 등록된 기관의 인증수단을 변경할 수 있습니다. 변경 요청한 기관의 인증 수단은 호출 즉시 변경되며, 이 후
-'connected_id'를 통해서 대상기관의 데이터를 연동할 수 있습니다.
+계정 생성을 통해 발급받은 'connectedId'에 등록된 기관의 인증수단을 변경할 수 있습니다. 변경 요청한 기관의 인증 수단은 호출 즉시 변경되며, 이 후
+'connectedId'를 통해서 대상기관의 데이터를 연동할 수 있습니다.
 
 * API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
 
@@ -212,7 +212,7 @@ list.add(accountMap1);
 bodyMap.put("accountList", list);
 		
 String connectedId = "엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 입력";
-bodyMap.put(CommonConstant.CONNECTED_ID, connectedId);
+bodyMap.put(CommonConstant.connectedId, connectedId);
 
 
 # CODEF API 호출
@@ -244,7 +244,7 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 
 ### 계정 삭제
 
-엔드유저가 등록된 계정의 삭제를 요청 시 'connected_id'에 등록된 기관의 인증수단을 즉시 삭제할 수 있습니다. 요청한 기관의 인증 수단은 호출 즉시 삭제되며,
+엔드유저가 등록된 계정의 삭제를 요청 시 'connectedId'에 등록된 기관의 인증수단을 즉시 삭제할 수 있습니다. 요청한 기관의 인증 수단은 호출 즉시 삭제되며,
 해당 데이터는 복구할 수 없습니다.
 
 * API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
@@ -413,7 +413,7 @@ String result = ApiRequest.reqeust(urlPath, bodyMap);
 
 ### CODEF API(법인 보유계좌조회)
 
-발급받은 'connected_id' 를 통해 등록된 기관의 보유계좌를 조회할 수 있습니다.
+발급받은 'connectedId' 를 통해 등록된 기관의 보유계좌를 조회할 수 있습니다.
 
 * API서버를 향한 모든 요청 파라미터는 URLEncoder를 통해 UTF-8로 인코딩되어야 합니다. (ApiRequest.java 참조)
 
