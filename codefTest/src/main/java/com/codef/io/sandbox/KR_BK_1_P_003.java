@@ -18,7 +18,7 @@ public class KR_BK_1_P_003 {
 		
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
-		bodyMap.put("connectedId", "bybF-S85kX998Trh23JUVb");	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
+		bodyMap.put("connectedId", "sandbox_connectedId");	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
 	
 		bodyMap.put("organization", "0004");
 		
