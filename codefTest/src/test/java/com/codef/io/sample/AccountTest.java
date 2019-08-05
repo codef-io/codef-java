@@ -1,10 +1,13 @@
 package com.codef.io.sample;
 
+import java.io.File;
 import java.io.IOException;
+import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.List;
 
@@ -12,6 +15,7 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 
+import org.apache.commons.io.FileUtils;
 import org.json.simple.parser.ParseException;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -272,6 +276,32 @@ public class AccountTest {
 		
 		// 응답결과 확인
 		System.out.println(result);
+	}
+	
+	/**
+	 * BASE64로 Encoding된 엔드유저의 인증서 key파일 문자열 추출 샘플
+	 *  
+	 * @throws IOException
+	 * @throws InvalidKeyException
+	 * @throws NoSuchAlgorithmException
+	 * @throws NoSuchPaddingException
+	 * @throws InvalidAlgorithmParameterException
+	 * @throws IllegalBlockSizeException
+	 * @throws BadPaddingException
+	 */
+	@Test 
+	@Ignore
+	public void getBase64FromCertFile() throws IOException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException, InvalidAlgorithmParameterException, IllegalBlockSizeException, BadPaddingException {
+		File certFile = new File("/Users/abcdefg/Documents/Modules/certification/heenamsub/signCert.der");
+		File keyFile = new File("/Users/abcdefg/Documents/Modules/certification/heenamsub/signPri.key");
+		
+		byte[] fileContent = FileUtils.readFileToByteArray(certFile);
+		String encodedString = Base64.getEncoder().encodeToString(fileContent);
+		System.out.println(encodedString);
+		
+		fileContent = FileUtils.readFileToByteArray(keyFile);
+		encodedString = Base64.getEncoder().encodeToString(fileContent);
+		System.out.println(encodedString);
 	}
 	
 }
