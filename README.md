@@ -92,6 +92,23 @@ bodyMap.put("accountList", list);
 # CODEF API 호출
 String result = ApiRequest.reqeust(urlPath, bodyMap);
 ```
+```java
+public static String encryptRSA(String plainText, String base64PublicKey)
+		throws NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException,
+			InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
+
+	byte[] bytePublicKey = Base64.getDecoder().decode(base64PublicKey);
+	KeyFactory keyFactory = KeyFactory.getInstance(ENCRYPT_TYPE_RSA);
+	PublicKey publicKey = keyFactory.generatePublic(new X509EncodedKeySpec(bytePublicKey));
+
+	Cipher cipher = Cipher.getInstance(ENCRYPT_TYPE_RSA);
+	cipher.init(Cipher.ENCRYPT_MODE, publicKey);
+	byte[] bytePlain = cipher.doFinal(plainText.getBytes());
+	String encrypted = Base64.getEncoder().encodeToString(bytePlain);
+
+	return encrypted;
+}
+```
 ```json
 {
   "result" : {
