@@ -1,18 +1,26 @@
 package com.codef.io.sandbox;
 
 import java.io.IOException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.HashMap;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 
 import org.json.simple.parser.ParseException;
 
 import com.codef.io.util.CommonConstant;
+import com.codef.io.util.RSAUtil;
 
 /**
  * 은행 개인 수시입출 거래내역	
  */
 public class KR_BK_1_P_002 {
 	
-	public static void main(String[] args) throws IOException, InterruptedException, ParseException {
+	public static void main(String[] args) throws IOException, InterruptedException, ParseException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		// 요청 URL 설정
 		String urlPath = CommonConstant.SANDBOX_DOMAIN + CommonConstant.KR_BK_1_P_002;
 		
@@ -28,7 +36,7 @@ public class KR_BK_1_P_002 {
 		bodyMap.put("orderBy", "0");
 		bodyMap.put("inquiryType", "1");
 		
-		bodyMap.put("accountPass", "");
+		bodyMap.put("accountPassword", RSAUtil.encryptRSA("password", CommonConstant.PUBLIC_KEY));		// 해당 필드 사용시 RSA암호화 필요. 미사용시 공백으로 설정.
 		// 요청 파라미터 설정 종료
 		
 		// API 요청

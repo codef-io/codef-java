@@ -1,13 +1,21 @@
 package com.codef.io.sample.bk;
 
 import java.io.IOException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.HashMap;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
 
 import org.json.simple.parser.ParseException;
 import org.junit.Test;
 
 import com.codef.io.util.ApiRequest;
 import com.codef.io.util.CommonConstant;
+import com.codef.io.util.RSAUtil;
 
 /**
  * 은행 개인 수시입출 거래내역	
@@ -15,7 +23,7 @@ import com.codef.io.util.CommonConstant;
 public class TestKR_BK_1_P_002 {
 	
 	@Test
-	public void testKR_BK_1_P_002() throws IOException, InterruptedException, ParseException {
+	public void testKR_BK_1_P_002() throws IOException, InterruptedException, ParseException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		// 요청 URL 설정
 		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.KR_BK_1_P_002;
 		
@@ -28,7 +36,7 @@ public class TestKR_BK_1_P_002 {
 		bodyMap.put("endDate",		"조회종료일자");
 		bodyMap.put("orderBy",		"정렬기준");
 		bodyMap.put("inquiryType",	"조회구분");
-		bodyMap.put("accountPass",	"계좌비밀번호");
+		bodyMap.put("accountPassword", RSAUtil.encryptRSA("계좌비밀번호", CommonConstant.PUBLIC_KEY));		// 해당 필드 사용시 RSA암호화 필요. 미사용시 공백으로 설정.
 		// 요청 파라미터 설정 종료
 		
 		// API 요청
