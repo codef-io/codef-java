@@ -16,8 +16,6 @@ import com.codef.io.util.CommonConstant;
 
 /**
  * 주민등록 진위여부 조회
- * @author daejongkwak
- *
  */
 public class KR_PB_A_004 {
 	

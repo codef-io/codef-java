@@ -16,8 +16,6 @@ import com.codef.io.util.CommonConstant;
 
 /**
  * 부동산등기 열람/발급
- * @author daejongkwak
- *
  */
 public class KR_PB_A_002 {
 	

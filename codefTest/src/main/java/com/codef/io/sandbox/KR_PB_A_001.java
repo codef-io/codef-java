@@ -11,8 +11,6 @@ import com.codef.io.util.CommonConstant;
 
 /**
  * 사업자 상태정보(휴폐업) 조회
- * @author daejongkwak
- *
  */
 public class KR_PB_A_001 {
 	
