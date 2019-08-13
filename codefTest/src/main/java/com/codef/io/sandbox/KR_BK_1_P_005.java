@@ -28,14 +28,14 @@ public class KR_BK_1_P_005 {
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
 		
 		bodyMap.put("fastId", "");
-		bodyMap.put("fastPassword", RSAUtil.encryptRSA("password", CommonConstant.PUBLIC_KEY));		// 해당 필드 사용시 RSA암호화 필요. 미사용시 공백으로 설정.	
+		bodyMap.put("fastPassword", "RSA암호화된 비밀번호");		// 해당 필드 사용시 RSA암호화 필요. 미사용시 공백으로 설정.	
 		bodyMap.put("id", "");
-		bodyMap.put("password", RSAUtil.encryptRSA("password", CommonConstant.PUBLIC_KEY));			// 해당 필드 사용시 RSA암호화 필요. 미사용시 공백으로 설정.
+		bodyMap.put("password", "RSA암호화된 비밀번호");			// 해당 필드 사용시 RSA암호화 필요. 미사용시 공백으로 설정.
 		
 		bodyMap.put("organization", "0004");
 		
 		bodyMap.put("account", "06170204160000"); 
-		bodyMap.put("accountPassword", RSAUtil.encryptRSA("password", CommonConstant.PUBLIC_KEY));		// 해당 필드 사용시 RSA암호화 필요. 미사용시 공백으로 설정.
+		bodyMap.put("accountPassword", "RSA암호화된 비밀번호");		// 해당 필드 사용시 RSA암호화 필요. 미사용시 공백으로 설정.
 		bodyMap.put("startDate", "20190301");
 		bodyMap.put("endDate", "20190619");
 		bodyMap.put("orderBy", "0");

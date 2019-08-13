@@ -13,30 +13,30 @@ import javax.crypto.NoSuchPaddingException;
 import org.json.simple.parser.ParseException;
 
 import com.codef.io.util.CommonConstant;
-import com.codef.io.util.RSAUtil;
 
 /**
- * 은행 개인 수시입출 거래내역	
+ * 주민등록 진위여부 조회
+ * @author daejongkwak
+ *
  */
-public class KR_BK_1_P_002 {
+public class KR_PB_A_004 {
 	
 	public static void main(String[] args) throws IOException, InterruptedException, ParseException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		// 요청 URL 설정
-		String urlPath = CommonConstant.SANDBOX_DOMAIN + CommonConstant.KR_BK_1_P_002;
+		String urlPath = CommonConstant.SANDBOX_DOMAIN + CommonConstant.KR_PB_A_004;
 		
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
-		bodyMap.put("connectedId", "sandbox_connectedId");	// 엔드유저의 은행/카드사 계정 등록 후 발급받은 커넥티드아이디 예시
+		bodyMap.put("organization", "0002");
+		 
+		bodyMap.put("password", "RSA암호화된 비밀번호");
+		bodyMap.put("certFile", "BASE64로 Encoding된 인증서 der파일 문자열");	// 진위여부를 판단할 사용자가 아닌 제3자의 인증서로 로그인 가능
+		bodyMap.put("keyFile",	"BASE64로 Encoding된 인증서 key파일 문자열");
 		
-		bodyMap.put("organization", "0004"); 
+		bodyMap.put("identity", "8201231000000");
+		bodyMap.put("issueDate", "20150518");
+		bodyMap.put("userName", "홍길동");
 		
-		bodyMap.put("account", "06170204160000"); 
-		bodyMap.put("startDate", "20190401");
-		bodyMap.put("endDate", "20190619");
-		bodyMap.put("orderBy", "0");
-		bodyMap.put("inquiryType", "1");
-		
-		bodyMap.put("accountPassword", "RSA암호화된 비밀번호");		// 해당 필드 사용시 RSA암호화 필요. 미사용시 공백으로 설정.
 		// 요청 파라미터 설정 종료
 		
 		// API 요청

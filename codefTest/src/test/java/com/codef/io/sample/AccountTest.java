@@ -41,7 +41,8 @@ public class AccountTest {
 	 * @throws NoSuchAlgorithmException 
 	 * @throws InvalidKeyException 
 	 */
-	@Test  @Ignore
+	@Test  
+	@Ignore
 	public void create() throws IOException, InterruptedException, ParseException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		/// 요청 URL 설정
 		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.CREATE_ACCOUNT;	
@@ -95,7 +96,8 @@ public class AccountTest {
 	 * @throws InterruptedException
 	 * @throws ParseException
 	 */
-	@Test @Ignore
+	@Test 
+	@Ignore
 	public void list() throws IOException, InterruptedException, ParseException {
 		// 요청 URL 설정
 		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.GET_ACCOUNTS;	
@@ -121,7 +123,8 @@ public class AccountTest {
 	 * @throws InterruptedException
 	 * @throws ParseException
 	 */
-	@Test @Ignore
+	@Test 
+	@Ignore
 	public void connectedIdList() throws IOException, InterruptedException, ParseException {
 		// 요청 URL 설정
 		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.GET_CONNECTED_IDS;	
@@ -151,7 +154,8 @@ public class AccountTest {
 	 * @throws NoSuchAlgorithmException 
 	 * @throws InvalidKeyException 
 	 */
-	@Test @Ignore
+	@Test 
+	@Ignore
 	public void add() throws IOException, InterruptedException, ParseException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		// 요청 URL 설정
 		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.ADD_ACCOUNT;	
@@ -201,7 +205,8 @@ public class AccountTest {
 	 * @throws NoSuchAlgorithmException 
 	 * @throws InvalidKeyException 
 	 */
-	@Test @Ignore
+	@Test 
+	@Ignore
 	public void update() throws IOException, InterruptedException, ParseException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		// 요청 URL 설정
 		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.UPDATE_ACCOUNT;	
@@ -247,7 +252,8 @@ public class AccountTest {
 	 * @throws InterruptedException 
 	 * @throws IOException 
 	 */
-	@Test @Ignore
+	@Test 
+	@Ignore
 	public void delete() throws IOException, InterruptedException, ParseException {
 		// 요청 URL 설정
 		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.DELETE_ACCOUNT;	

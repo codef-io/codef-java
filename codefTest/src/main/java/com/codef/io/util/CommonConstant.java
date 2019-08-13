@@ -36,12 +36,15 @@ public class CommonConstant {
 	public static final String KR_CD_B_003	= "/v1/kr/card/b/account/billing-list";                         // 카드 법인 청구내역
 	public static final String KR_CD_B_004	= "/v1/kr/card/b/account/limit";                                // 카드 법인 한도조회
 
-	               
 	public static final String KR_CD_P_001	= "/v1/kr/card/p/account/card-list";                            // 카드 개인 보유카드
 	public static final String KR_CD_P_002	= "/v1/kr/card/p/account/approval-list";                        // 카드 개인 승인내역
 	public static final String KR_CD_P_003	= "/v1/kr/card/p/account/billing-list";                         // 카드 개인 청구내역
 	public static final String KR_CD_P_004	= "/v1/kr/card/p/account/limit";                                // 카드 개인 한도조회
 	              
+	public static final String KR_PB_A_001	= "/v1/kr/public/a/business/status";                            // 공공 사업자상태
+	public static final String KR_PB_A_002	= "/v1/kr/public/a/real-estate-register/status";                // 공공 부동산등기
+	public static final String KR_PB_A_003	= "/v1/kr/public/a/driver-license/status";                      // 공공 운전면허 진위여부
+	public static final String KR_PB_A_004	= "/v1/kr/public/a/identity-card/status";                       // 공공 주민등록 진위여부
 	
 	public static final String GET_CONNECTED_IDS = "/v1/account/connectedId-list";       					// 커넥티드아이디 목록 조회			
 	public static final String GET_ACCOUNTS = "/v1/account/list";            								// 계정 목록 조회			
