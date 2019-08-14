@@ -24,11 +24,11 @@ public class TestKR_PB_A_003 {
 		bodyMap.put("organization", "기관코드"); 
 		
 		bodyMap.put("birthDate", "생년월일(YYYYMMDD)");
-		bodyMap.put("licenseNo01", "운전 면허번호01 (지역)");
-		bodyMap.put("licenseNo02", "운전 면허번호02 (년도)");
-		bodyMap.put("licenseNo03", "운전 면허번호03");
-		bodyMap.put("licenseNo04", "운전 면허번호04");
-		bodyMap.put("serialNo", "일련번호");
+		bodyMap.put("licenseNo01", "운전 면허번호01 (지역) 2자리");	// 면허 번호 OO-XX-XXXXXX-XX
+		bodyMap.put("licenseNo02", "운전 면허번호02 (년도) 2자리");	// 면허 번호 XX-OO-XXXXXX-XX
+		bodyMap.put("licenseNo03", "운전 면허번호03 6자리");		// 면허 번호 XX-XX-OOOOOO-XX
+		bodyMap.put("licenseNo04", "운전 면허번호04 2자리");		// 면허 번호 XX-XX-XXXXXX-OO
+		bodyMap.put("serialNo", "일련번호");						// 암호일련번호 (면허증 우측 작은사진 밑 위조방지를 위한 숫자+영문 6자리 또는 5자리 번호(숫자 3자리 + 영문2자리))
 		bodyMap.put("userName", "사용자 이름");
 		// 요청 파라미터 설정 종료
 		
