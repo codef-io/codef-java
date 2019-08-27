@@ -6,9 +6,9 @@ package com.codef.io.util;
 public class CommonConstant {
 	
 	public static final String API_DOMAIN 	= "https://api.codef.io";										// API서버 도메인		
-	public static final String TEST_DOMAIN 	= "https://tapi.codef.io";										// API서버 테스트 도메인		
+	public static final String TEST_DOMAIN 	= "https://development.codef.io";								// API서버 데모 도메인		
 	
-	public static final String TOKEN_DOMAIN = "https://toauth.codef.io";									// OAUTH2.0 테스트 도메인
+	public static final String TOKEN_DOMAIN = "https://oauth.codef.io";										// OAUTH2.0 테스트 도메인
 	public static final String GET_TOKEN 	= "/oauth/token";												// OAUTH2.0 토큰 발급 요청 URL
 	
 	public static final String CONNECTED_ID = "connectedId";												// 유저 식별 연결 아이디
@@ -76,7 +76,7 @@ public class CommonConstant {
 	
 	
 	/**	샌드박스 테스트용 상수	*/
-	public static final String SANDBOX_DOMAIN = "https://tsandbox.codef.io";									// API서버 샌드박스 도메인		
+	public static final String SANDBOX_DOMAIN = "https://sandbox.codef.io";									// API서버 샌드박스 도메인		
 	public static final String SANDBOX_CLIENT_ID 	= "ef27cfaa-10c1-4470-adac-60ba476273f9";				// CODEF 샌드박스 클라이언트 아이디
 	public static final String SANDBOX_SECERET_KEY 	= "83160c33-9045-4915-86d8-809473cdf5c3";				// CODEF 샌드박스 클라이언트 시크릿
 	
