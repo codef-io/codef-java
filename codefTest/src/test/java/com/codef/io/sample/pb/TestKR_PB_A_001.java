@@ -19,7 +19,7 @@ public class TestKR_PB_A_001 {
 	@Test
 	public void testKR_PB_A_001() throws IOException, InterruptedException, ParseException {
 		// 요청 URL 설정
-		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.KR_PB_A_001;
+		String urlPath = CommonConstant.getRequestDomain() + CommonConstant.KR_PB_NT_001;
 		
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();

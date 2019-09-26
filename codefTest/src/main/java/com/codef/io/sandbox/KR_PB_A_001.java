@@ -16,7 +16,7 @@ public class KR_PB_A_001 {
 	
 	public static void main(String[] args) throws IOException, InterruptedException, ParseException {
 		// 요청 URL 설정
-		String urlPath = CommonConstant.SANDBOX_DOMAIN + CommonConstant.KR_PB_A_001;
+		String urlPath = CommonConstant.SANDBOX_DOMAIN + CommonConstant.KR_PB_NT_001;
 		
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();

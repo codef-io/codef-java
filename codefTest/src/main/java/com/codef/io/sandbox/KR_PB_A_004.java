@@ -21,7 +21,7 @@ public class KR_PB_A_004 {
 	
 	public static void main(String[] args) throws IOException, InterruptedException, ParseException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
 		// 요청 URL 설정
-		String urlPath = CommonConstant.SANDBOX_DOMAIN + CommonConstant.KR_PB_A_004;
+		String urlPath = CommonConstant.SANDBOX_DOMAIN + CommonConstant.KR_PB_MW_001;
 		
 		// 요청 파라미터 설정 시작
 		HashMap<String, Object> bodyMap = new HashMap<String, Object>();
