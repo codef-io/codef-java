@@ -73,7 +73,7 @@ public class AccountTest {
 		accountMap2.put("loginType",  	"1");
 		
 		String password2 = "엔드유저의 기관 로그인 비밀번호";
-		accountMap1.put("password",  	RSAUtil.encryptRSA(password2, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
+		accountMap2.put("password",  	RSAUtil.encryptRSA(password2, CommonConstant.PUBLIC_KEY));	/**	password RSA encrypt */
 
 		accountMap2.put("id",  			"엔드 유저의 기관 로그인 아이디");
 		accountMap2.put("birthday",		"YYMMDD");
