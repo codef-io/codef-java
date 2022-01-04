@@ -4,14 +4,14 @@ Java sample for CODEF API
 ## Documentation
 
 본 샘플은 CODEF API의 연동을 위한 공통 코드를 포함하고 있으며, 지원하는 모든 API의 엔드포인트(은행, 카드, 보험, 증권, 공공, 기타)는
-https://develpers.codef.io 를 통해 확인할 수 있습니다.
+https://developer.codef.io 를 통해 확인할 수 있습니다.
 
 ## CODEF API Env
 
 CODEF API는 원활한 개발을 위해 샌드박스, 개발, 운영 환경을 각각 제공합니다.
 
 - 샌드박스 : https://sandbox.codef.io
-- 개발 : https://developer.codef.io/
+- 개발 : https://development.codef.io/
 - 운영 : https://api.codef.io
 
 ## Getting Started
